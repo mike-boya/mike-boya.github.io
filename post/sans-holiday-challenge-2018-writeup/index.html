@@ -428,7 +428,8 @@ if (!doNotTrack) {
   <header>
     <div class="title">
         
-            <h2><a href="https://mike-boya.github.io/post/sans-holiday-challenge-2018-writeup/">SANS Holiday Challenge 2018 - Writeup</a></h2>
+            <h1><a href="https://mike-boya.github.io/post/sans-holiday-challenge-2018-writeup/">SANS Holiday Challenge 2018 - Writeup</a></h1>
+            
         
         
     </div>
@@ -507,17 +508,21 @@ if (!doNotTrack) {
     <h2 id="intro">Intro</h2>
 <p>Hello and Happy New Year! This year's Holiday Hack Challenge theme was an online conference called KringleCon, a cyber security conference hosted by Santa and his elves. It had all the elements of an in-person conference, including talks, badges, swag and the ability to network with other attendees. The challenge was to solve all 10 objectives and each of the &ldquo;Cranberry Pi&rdquo; mini-challenges.</p>
 <!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/kringlecon.png" alt="KringleCon"></p>
+<!-- raw HTML omitted -->
 <p>Before reading my write-up, it is worth noting that previous Holiday Hack Challenges are kept all year now. So before you read this post, go try it out if you have not already.</p>
 <p>One of the best parts of Holiday Hack is the collaboration and friends you make along the way. While in <em>LineCON</em> waiting for KringleCon to open, I hung with my buddies <a href="https://twitter.com/_zakec">Cakez</a> and <a href="https://twitter.com/RichRoc17">Taffy</a>:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/friends.png" alt="Friends"></p>
 <p>After entering Santa's castle, I noticed a suspicious character with a walkie talkie in the middle of the first room. The name above his head read &ldquo;Hans,&rdquo; and I immediately recognized the <strong>Die Hard</strong> reference and knew we were in for some major fun!</p>
+<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/suspicious-activity.png" alt="Suspicious Activity"></p>
 <!-- raw HTML omitted -->
 <h2 id="cranberry-pi-terminals">Cranberry Pi Terminals</h2>
 <h3 id="essential-editor-skills">Essential Editor Skills</h3>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/vi-exit.png" alt="vi Exit"></p>
 <p>Vi can be exited a number of ways. I chose to use <!-- raw HTML omitted -->:q!<!-- raw HTML omitted -->. After exiting the editor, we were presented with the congratulatory message indicating we solved the first terminal.</p>
 <h3 id="devops-fail">DevOps Fail</h3>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/devops-fail.png" alt="Devops Fail"></p>
 <p>As shown in the screenshot above, there are some credentials stored in this repo. I parsed through the logs with <em>git log</em>:</p>
 <pre><code>commit 60a2ffea7520ee980a5fc60177ff4d0633f2516b
 Author: Sparkle Redberry &lt;sredberry@kringlecon.com&gt;
@@ -549,7 +554,7 @@ index 740eba5..0000000
 -};
 </code></pre><p>As you can see in the output above, the password that was removed from the git repo belongs to Sparkle Redberry. The password and the answer for this terminal is <strong>twinkletwinkletwinkle</strong>.</p>
 <h3 id="python-escape-from-la">Python Escape From LA</h3>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/python-escape.png" alt="Python Escape"></p>
 <p>Interestingly, we were dropped in a Python shell. Using some of <a href="https://twitter.com/MarkBaggett">Mark Baggett's</a> tricks helped us escape the restriction:</p>
 <pre><code>&gt;&gt;&gt; foo = eval('__imp' + 'ort__(&quot;pt&quot; + &quot;y&quot;)')
 &gt;&gt;&gt; foo.spawn(&quot;/bin/bash&quot;)
@@ -579,7 +584,7 @@ You have sent that lizard packing!
             
 You escaped! Congratulations!
 </code></pre><h3 id="the-name-game">The Name Game</h3>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/name-game.png" alt="Name Game"></p>
 <p>A quick demo of the menus revealed that option 2 &ldquo;verify the system&rdquo; simply runs <em>ping</em>. If that is running a system command, can we inject an additional command?</p>
 <pre><code>Validating data store for employee onboard information.
 Enter address of server: 8.8.8.8; ls -al
@@ -623,9 +628,9 @@ COMMIT;
 onboard.db: SQLite 3.x database
 ==========SNIPPED=========
 </code></pre><p>As shown in the output above, the first name of our guy &ldquo;Chan!&rdquo; is Scott&hellip;</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/hello-scott.png" alt="Hello Scott"></p>
 <h3 id="the-sleighbell">The Sleighbell</h3>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/sleighbell.png" alt="SleighBell"></p>
 <p>As shown in the screenshot above, the goal of this challenge is to win the sleighbell lottery. I used <!-- raw HTML omitted -->objdump -d sleighbell-lotto<!-- raw HTML omitted --> to disassemble the binary and spotted a function called <em>winnerwinner</em>. I loaded the binary into <em>gdb</em>, set a breakpoint in main, and called the discovered function:</p>
 <pre><code>elf@e7e28b7283f9:~$ ls
 gdb  objdump  sleighbell-lotto
@@ -668,7 +673,7 @@ I'll hang the bells on Santa's sleigh!
 
 Congratulations! You've won, and have successfully completed this challenge.
 </code></pre><h3 id="curling-master">CURLing Master</h3>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/curling-master.png" alt="Curling Master"></p>
 <p>A quick perusal of the users .bash_history file listed a <em>cURL</em> command. I re-ran it:</p>
 <pre><code>elf@503ec8ecc91c:~$ curl --http2-prior-knowledge http://localhost:8080/index.php
 &lt;html&gt;
@@ -719,7 +724,7 @@ TLS connections are in place when they do so.
  &lt;/body&gt;
 &lt;/html&gt;  
 </code></pre><h3 id="yule-log-analysis">Yule Log Analysis</h3>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/yule-log.png" alt="Yule Log"></p>
 <p>For this challenge, we are provided with Windows evtx logs, but the creators were nice enough to give us a linux box and a python script to dump the evtx logs to a text file:</p>
 <pre><code>elf@2005c032725e:~$ ls
 evtx_dump.py  ho-ho-no.evtx  runtoanswer
@@ -741,7 +746,7 @@ elf@0bd5ebc989bf:~$ grep -B 35 '&lt;Data Name=&quot;IpAddress&quot;&gt;172.31.25
 
 </code></pre><p>I knew that only a single account was compromised and password spraying was the vector. The output shows that <strong>minty.candycane</strong> is the account that was broken into due to it being an outlier with two successful logins, while every other account had one failed login.</p>
 <h3 id="lethal-forensicelfication">Lethal ForensicELFication</h3>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/forensic-elf.png" alt="Forensic Elf"></p>
 <p>The first item of note for this challenge is a hidden directory named .secrets. It contained a directory called &ldquo;her&rdquo; that contained a poem.txt. However, the poem did not reveal who it was about. There is a <em>.viminfo</em> file in the home directory. This file is used to store state information so you can continue where you left off when you exited vim.</p>
 <pre><code>$ cat .viminfo 
 # This viminfo file was generated by Vim 8.0.
@@ -753,9 +758,9 @@ elf@0bd5ebc989bf:~$ grep -B 35 '&lt;Data Name=&quot;IpAddress&quot;&gt;172.31.25
 :%s/Elinore/NEVERMORE/g
 |2,0,1536607217,,&quot;%s/Elinore/NEVERMORE/g&quot;
 </code></pre><p>The <em>.viminfo</em> file contained the command line history. This history reveals that Morcel Nougat performed a global search and replace in vim to replace all instances of Elinore with NEVERMORE. Submitting Elinore to runtoanswer results in:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/elinore.png" alt="Elinore"></p>
 <h3 id="stall-mucking-report">Stall Mucking Report</h3>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/stall-mucking.png" alt="Stall Mucking"></p>
 <p>The screen resolution for this made it a bit difficult. I sent the results of <em>ps a</em> to a file and viewed the contents:</p>
 <pre><code>elf@0cecab02e316:~$ ps a &gt; out.txt
 elf@0cecab02e316:~$ cat out.txt 
@@ -806,7 +811,7 @@ Building separate accounts for each elf in the lot.
 </code></pre><h2 id="objectives">Objectives</h2>
 <h3 id="objective-1-orientation-challenge">Objective 1: Orientation Challenge</h3>
 <p><strong>What phrase is revealed when you answer all of the questions at the KringleCon Holiday Hack History kiosk inside the castle?</strong></p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/kringlecon-kiosk.png" alt="KringleCon Kiosk"></p>
 <p>The image above shows me standing next to the kiosk. It poses six questions about past Holiday Hack challenges. The answers were:</p>
 <ol>
 <li>
@@ -835,21 +840,23 @@ Building separate accounts for each elf in the lot.
 </li>
 </ol>
 <p>After answering all these, the secret phrase was revealed:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/happy-trails.png" alt="Happy Trails"></p>
 <h3 id="objective-2-directory-browsing">Objective 2: Directory Browsing</h3>
 <p><strong>Who submitted (First Last) the rejected talk titled Data Loss for Rainbow Teams: A Path in the Darkness? Please analyze the CFP site (<a href="https://cfp.kringlecastle.com/">https://cfp.kringlecastle.com/</a>) to find out.</strong></p>
 <p>I browsed to the CFP site to take a look:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/cfp-apply.png" alt="CFP Apply"></p>
 <p>When I clicked APPLY NOW! link, it brought me to this URL:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/cfp-url.png" alt="CFP URL"></p>
 <p>I noted the <em>cfp</em> directory and removed <em>cfp.html</em> from the URL:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/cfp-dir-listing.png" alt="CFP Dir Listing"></p>
 <p>Nice, a directory listing! The listing contained a document called <em>rejected-talks.csv</em>. I clicked the link and searched the document for the title of the rejected talk:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/cfp-answer.png" alt="CFP Answer"></p>
 <p>The rejected talk was submitted by <strong>John McClane</strong>.</p>
 <h3 id="objective-3-de-bruijn-sequences">Objective 3: de Bruijn Sequences</h3>
 <p><strong>When you break into the speaker unpreparedness room, what does Morcel Nougat say?</strong></p>
 <p>The door passcode panel indicated that the code was a four-shape combination. I will be totally honest here - I was preparing to write a script when I noticed that you can submit unlimited sequences without getting kicked from the terminal window. I simply &ldquo;button-mashed&rdquo; a few times and got lucky.</p>
+<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/de-bruijn.png" alt="de-bruijn"></p>
 <!-- raw HTML omitted -->
 <p>After gaining access to the room and clicking on him, Morcel Nougat proclaims <strong>“Welcome unprepared speaker!”</strong></p>
 <h3 id="objective-4-data-repo-analysis">Objective 4: Data Repo Analysis</h3>
@@ -888,12 +895,14 @@ index 0000000..b06a507
 <p><strong>Using the data set contained in this SANS Slingshot Linux image, find a reliable path from a Kerberoastable user to the Domain Admins group. What’s the user’s logon name?</strong></p>
 <p>I was very excited for this challenge, I'm a big fan of BloodHound. I was hoping for a difficult challenge like writing a custom Cypher query, but getting others familiar with BloodHound is also important!</p>
 <p>After loading the BloodHound interface and navigating to the <em>Queries</em> section, there is a pre-built query that does exactly what we are looking for. A small tip here - since <em>CanRDP</em> is not a reliable path, I disabled it in the Edge Filtering menu (located under <em>Special</em>):</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/bh-edge-filtering.png" alt="BH Edge Filtering"></p>
 <p>Running this pre-built query with the <em>CanRDP</em> filter unchecked resulted in only one path:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/bh-final-path.png" alt="BH Final Path"></p>
 <p>Therefore, the only Kerberoastable user with a reliable path to DA is <strong><a href="mailto:LDUBEJ00320@AD.KRINGLECASTLE.COM">LDUBEJ00320@AD.KRINGLECASTLE.COM</a></strong>.</p>
 <h3 id="objective-6-badge-manipulation">Objective 6: Badge Manipulation</h3>
 <p><strong>Bypass the authentication mechanism associated with the room near Pepper Minstix. A <a href="https://www.holidayhackchallenge.com/2018/challenges/alabaster_badge.jpg">sample employee badge is available</a>. What is the access control number revealed by the door authentication panel?</strong></p>
+<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/alabaster_badge.jpg" alt="Alabaster Badge"></p>
 <!-- raw HTML omitted -->
 <p>I performed some quick analysis of the sample badge:</p>
 <ol>
@@ -930,7 +939,7 @@ attacked our Holidays last year.&quot;
 <h3 id="objective-8-network-traffic-forensics">Objective 8: Network Traffic Forensics</h3>
 <p><strong>Santa has introduced a web-based packet capture and analysis tool at <a href="https://packalyzer.kringlecastle.com">https://packalyzer.kringlecastle.com</a> to support the elves and their information security work. Using the system, access and decrypt HTTP/2 network activity. What is the name of the song described in the document sent from Holly Evergreen to Alabaster Snowball?</strong></p>
 <p>This one really stumped me for awhile! When I first took a look at the Packalyzer app, I ran a capture, downloaded it, and investigated using Wireshark. Unfortunately, the traffic is encrypted, but that jogged my memory about something I had seen. After solving the Python Cranberry Pi, SugarPlum Mary shares a rumor that Packalyzer was rushed into production with development code sitting in the web root. I investigated and found a reference to <em>app.js</em> in a comment in the pages source. I loaded app.js:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/app-js.png" alt="App JS"></p>
 <p>The screenshot above shows:</p>
 <ol>
 <li>We need that keylog file to decrypt the HTTP/2 traffic</li>
@@ -938,31 +947,31 @@ attacked our Holidays last year.&quot;
 <li>Environment variables are being used</li>
 </ol>
 <p>I knew that I needed to leak the environment variables, but how? Further down in the code:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/app-js-2.png" alt="App JS 2"></p>
 <p>This showed that the application builds the directory structure using the environment variables. Now, this is where I really tripped myself up&hellip; I loaded /DEV/ saw this output:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/dev-packalyzer-env.png" alt="Dev Packalyzer env"></p>
 <p>I thought to myself, &ldquo;Well, that didn't work&hellip;&rdquo; and went on testing and researching anything that could leak the environment variables. If I had run the second test, shown below, I would have realized that /DEV/ worked and I was just moving too quickly:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/ssl-packalyzer-env.png" alt="SSL Packalyzer env"></p>
 <p>As shown in the two screenshots, I was able to obtain the environment variables values from the error messages. Then I loaded the final URL to grab the client random SSL log:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/client-random-ssl.png" alt="Client Random SSL"></p>
 <p>I saved that to a file and loaded it into Wireshark (Preferences &gt; Protocols &gt; SSL):</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/wireshark-preferences.png" alt="Wireshark Preferences"></p>
 <p>Parsing the decrypted pcap, I expected to see a document sent but I was only able to collect three sets of credentials:</p>
 <pre><code>alabaster:Packer-p@re-turntable192
 bushy:Floppity_Floopy-flab19283
 pepper:Shiz-Bamer_wabl182
 </code></pre><p>Looking closer, these are the three users credentials for packalyzer. I logged in with all three to search around and Alabaster had a capture saved named &ldquo;super_secret_packet_capture.pcap&rdquo;. It is a capture containing only one stream, a single SMTP connection:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/smtp-stream.png" alt="SMTP Stream"></p>
 <p>The email contained an attachment. I grabbed the base64 encoded text, decoded it and opened the file. It is a PDF describing how to transpose piano keys.</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/snowball-pdf.png" alt="Snowball PDF"></p>
 <p>I completed the objective by submitting the song - <strong>Mary Had a Little Lamb</strong>.</p>
 <h3 id="objective-9-ransomware-recovery">Objective 9: Ransomware Recovery</h3>
 <p><strong>Alabaster Snowball is in dire need of your help. Santa's file server has been hit with malware. Help Alabaster Snowball deal with the malware on Santa's server by completing several tasks.</strong></p>
 <p><strong>Catch the Malware: Assist Alabaster by building a Snort filter to identify the malware plaguing Santa's Castle.</strong></p>
 <p>I loaded up the Snort terminal:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/snort-terminal.png" alt="Snort Terminal"></p>
 <p>The <!-- raw HTML omitted -->more_info.txt<!-- raw HTML omitted --> file provides us with an web interface, <a href="https://snortsensor1.kringlecastle.com/,">https://snortsensor1.kringlecastle.com/,</a> that stores the last five minutes worth of pcaps. I grabbed a few of the pcaps and started looking at the malicious traffic:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/dns-traffic.png" alt="DNS Traffic"></p>
 <p>Interesting. I saw a lot of DNS traffic to various domains, with a very unique hex string. I wanted to understand that string before keying on it:</p>
 <pre><code>&gt;&gt;&gt; '77616E6E61636F6F6B69652E6D696E2E707331'.decode('hex')
 'wannacookie.min.ps1'
@@ -985,7 +994,7 @@ elf@f770b1e2e77d:~$
 <pre><code>$ tshark -Y dns -r snort.log.1545891713.0441875.pcap -Y 'dns.qry.name contains &quot;77616E6E61636F6F6B69652E6D696E2E707331&quot;' -T fields -e dns.txt &gt; fused.txt
 $ sed '/^$/d' fused.txt | sed -n 'g;n;p' &gt; fuse2.txt
 </code></pre><p>I put the content from <!-- raw HTML omitted -->fuse2.txt<!-- raw HTML omitted --> into <a href="https://gchq.github.io/CyberChef/">CyberChef</a> to decode the Hex:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/wannacookie-decode.png" alt="WannaCookie Decode"></p>
 <p>Finally, I opened the file in a text editor and replaced all the semi-colons with newlines to clean up the formatting. There were multiple references to <!-- raw HTML omitted -->erohetfanu.com<!-- raw HTML omitted --> throughout the malicious powershell script. I submitted <strong>erohetfanu.com</strong> to complete this objective.</p>
 <p><strong>Stop the Malware: Identify a way to stop the malware in its tracks!</strong></p>
 <p>Alabaster mentions &ldquo;another ransomware in recent history had a killswitch domain that, when registered, would prevent any further infections.&rdquo; I started analyzing the malware and found this line:</p>
@@ -993,9 +1002,9 @@ $ sed '/^$/d' fused.txt | sed -n 'g;n;p' &gt; fuse2.txt
 </code></pre></div><p>This looks promising, since <!-- raw HTML omitted -->6B696C6C737769746368<!-- raw HTML omitted --> hex decoded equates to &ldquo;killswitch&rdquo;. I used PowerShell ISE to complete this task. I loaded the PowerShell code, set a breakpoint at the killswitch line. Now, the call tries to resolve the name with 8.8.8.8. I removed the call to see what domain was being queried. With ISE, it is as simple as passing this into the debugger:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$(H2A $(B2H $(ti_rox $(B2H $(G2B $(H2B $S1))) $(Resolve-DnsName -Server erohetfanu.com -Name 6B696C6C737769746368.erohetfanu.com -Type TXT).Strings)))
 </code></pre></div><p>The screenshot below shows the output:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/killswitch-print.png" alt="Killswitch Print"></p>
 <p>I went over to the HoHoHoDaddy terminal and registered the <!-- raw HTML omitted -->yippeekiyaa.aaay<!-- raw HTML omitted --> domain:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/killswitch-register.png" alt="Killswitch Register"></p>
 <p>Registering the domain completes this objective.</p>
 <p><strong>Recover Alabaster's Password: Recover Alabaster's password as found in the the encrypted password vault.</strong></p>
 <p>After completing the last objective, Alabaster provides a memory dump - his encrypted password database - and a request for help recovering his passwords. This objective was tough, but I had to cross the finish line. I had a general sense for what the PowerShell code was doing, but I went through and analyzed each part with PowerShell ISE to truly understand how it worked. I'll keep this section brief, since this post is already fairly long.</p>
@@ -1124,7 +1133,7 @@ alabaster@kringlecastle.com|ChristMasRox19283|www.reddit.com
 <p>This is the final objective and to solve it, we have to unlock the piano lock. I confidently accessed the lock and entered the piano key password from Alabaster's password vault. I was met with a message specifying, &ldquo;Now that's a good tune! But the key isn't quite right&hellip;&quot;. A new hint from Alabaster Snowball appeared: &ldquo;Really, it's Mozart. And it should be in the key of D, not E.&rdquo;</p>
 <p>Interesting. I dug up the PDF that Holly Evergreen had sent Alabaster during the Packalyzer challenge. The PDF had referenced <em>transposition</em>, which I used to convert the password.</p>
 <p>The final password translated to - <strong>DC#DC#DDC#DEF#EF#GAG#AG#A</strong>. Using this, we play the piano lock and open the final door to reveal&hellip;</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/sans_2018/final-plan.png" alt="Final Plan"></p>
 <p><strong>Santa</strong> was behind the whole KringleCon plan. Han and the Toy Soldiers (undercover Elves) work for him. The entire scenario was a test to find security professionals with skills across the various infosec domains to help defend the operation next year from any nefarious actors!</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Another great SANS Holiday Hack in the books! I loved the diversity of the challenges this year, which provided me with the opportunity to practice a number of different skills including pentesting, incident response, network forensics, malware analysis, and many more. As always, thank you to Ed Skoudis and the CounterHack team for putting it together.</p>

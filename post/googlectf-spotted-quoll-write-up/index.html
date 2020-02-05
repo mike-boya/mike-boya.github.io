@@ -13,7 +13,7 @@
         "articleSection" : "post",
         "name" : "GoogleCTF - Spotted Quoll Write-Up",
         "headline" : "GoogleCTF - Spotted Quoll Write-Up",
-        "description" : "\x3ch2 id=\x22intro\x22\x3eIntro\x3c\/h2\x3e\n\x3cp\x3eI participated in the Google CTF this weekend and really enjoyed the challenges. Here is a\nwrite-up of one of my solutions.\x3c\/p\x3e\n\x3ch2 id=\x22challenge\x22\x3eChallenge\x3c\/h2\x3e\n\x3cp\x3e\x3cstrong\x3eSpotted Quoll\x3c\/strong\x3e was a web challenge worth 50 points. The details of the challenge are in the image below.\x3c\/p\x3e\n\x3c!-- raw HTML omitted --\x3e\n\x3cp\x3eI loaded up the blog and looked for any clues:\x3c\/p\x3e\n\x3c!-- raw HTML omitted --\x3e",
+        "description" : "\x3ch2 id=\x22intro\x22\x3eIntro\x3c\/h2\x3e\n\x3cp\x3eI participated in the Google CTF this weekend and really enjoyed the challenges. Here is a\nwrite-up of one of my solutions.\x3c\/p\x3e\n\x3ch2 id=\x22challenge\x22\x3eChallenge\x3c\/h2\x3e\n\x3cp\x3e\x3cstrong\x3eSpotted Quoll\x3c\/strong\x3e was a web challenge worth 50 points. The details of the challenge are in the image below.\x3c\/p\x3e\n\x3cp\x3e\x3cimg src=\x22\/images\/gctf_2016\/problem.png\x22 alt=\x22Problem\x22\x3e\x3c\/p\x3e\n\x3cp\x3eI loaded up the blog and looked for any clues:\x3c\/p\x3e\n\x3cp\x3e\x3cimg src=\x22\/images\/gctf_2016\/blog.png\x22 alt=\x22Blog\x22\x3e\x3c\/p\x3e",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -528,12 +528,12 @@ if (!doNotTrack) {
 write-up of one of my solutions.</p>
 <h2 id="challenge">Challenge</h2>
 <p><strong>Spotted Quoll</strong> was a web challenge worth 50 points. The details of the challenge are in the image below.</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/gctf_2016/problem.png" alt="Problem"></p>
 <p>I loaded up the blog and looked for any clues:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/gctf_2016/blog.png" alt="Blog"></p>
 <h2 id="solution">Solution</h2>
 <p>I started up <em>burp</em> and reloaded the page. I navigated to the <!-- raw HTML omitted -->/admin<!-- raw HTML omitted --> section of the blog and received an error:</p>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/gctf_2016/error.png" alt="Error"></p>
 <p>A cookie called &ldquo;obsoletePickle&rdquo; was being passed with my requests.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">      GET / HTTP/1.1
       Host: spotted-quoll.ctfcompetition.com
@@ -574,7 +574,7 @@ KGRwMApTJ3B5dGhvbicKcDEKUydwaWNrbGVzJwpwMgpzUydzdWJ0bGUnCnAzClMnaGludCcKcDQKc1Mn
   Cookie: obsoletePickle=KGRwMApTJ3B5dGhvbicKcDEKUydwaWNrbGVzJwpwMgpzUydzdWJ0bGUnCnAzClMnaGludCcKcDQKc1MndXNlcicKcDUKUydhZG1pbicKcDYKcy4=
   Connection: close
 </code></pre>
-<!-- raw HTML omitted -->
+<p><img src="https://mike-boya.github.io/images/gctf_2016/solution.png" alt="Solution"></p>
 <p>Success! The flag is &ldquo;CTF{but_wait,theres_more.if_you_call}&rdquo;</p>
   </div>
 
