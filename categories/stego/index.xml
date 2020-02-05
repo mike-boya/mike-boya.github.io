@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stego on Mike Boya</title>
+    <link>https://mike-boya.github.io/categories/stego/</link>
+    <description>Recent content in Stego on Mike Boya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mike-boya.github.io/categories/stego/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Metasploit CTF 2020 - Queen Of Diamonds Write-Up</title>
+      <link>https://mike-boya.github.io/post/metasploitctf2020-queen-of-diamonds-write-up/</link>
+      <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mike-boya.github.io/post/metasploitctf2020-queen-of-diamonds-write-up/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;My team and I participated in the Metasploit CTF this past week and came in third place! I wanted to write up a solution for one of my favorite challenges.&lt;/p&gt;
+&lt;p&gt;Special thanks to the Metasploit team for creating another great CTF and congrats to team pepega and &lt;a href=&#34;https://twitter.com/excusemewtf_ctf&#34;&gt;excusemewtf&lt;/a&gt; for taking the top spots!&lt;/p&gt;
+&lt;h2 id=&#34;challenge&#34;&gt;Challenge&lt;/h2&gt;
+&lt;p&gt;First, I browsed to port 80 and was met with this screen:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/metasploit-ctf_2020/port80.png&#34; alt=&#34;80&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Interesting, I kicked off a &lt;strong&gt;gobuster&lt;/strong&gt; scan but returned to find no results. The icon in the top left looked suspicious, so I loaded it directly.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/metasploit-ctf_2020/ms_logo.png&#34; alt=&#34;ms logo&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Wow, a QR code&amp;hellip;&lt;/p&gt;
+&lt;p&gt;SPOILERS BELOW - The picture linked above is the exact image from the challenge, so feel free to give it a shot before reading the solution.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

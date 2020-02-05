@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Mike Boya</title>
+    <link>https://mike-boya.github.io/categories/</link>
+    <description>Recent content in Categories on Mike Boya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mike-boya.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CTF</title>
+      <link>https://mike-boya.github.io/categories/ctf/</link>
+      <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mike-boya.github.io/categories/ctf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stego</title>
+      <link>https://mike-boya.github.io/categories/stego/</link>
+      <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mike-boya.github.io/categories/stego/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SANS Holiday Hack</title>
+      <link>https://mike-boya.github.io/categories/sans-holiday-hack/</link>
+      <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mike-boya.github.io/categories/sans-holiday-hack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exploit Exercises</title>
+      <link>https://mike-boya.github.io/categories/exploit-exercises/</link>
+      <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://mike-boya.github.io/categories/exploit-exercises/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Offensive Security</title>
+      <link>https://mike-boya.github.io/categories/offensive-security/</link>
+      <pubDate>Tue, 07 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://mike-boya.github.io/categories/offensive-security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OSCP</title>
+      <link>https://mike-boya.github.io/categories/oscp/</link>
+      <pubDate>Tue, 07 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://mike-boya.github.io/categories/oscp/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
