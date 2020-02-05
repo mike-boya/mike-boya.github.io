@@ -440,23 +440,23 @@ if (!doNotTrack) {
 <p>Special thanks to the Metasploit team for creating another great CTF and congrats to team pepega and <a href="https://twitter.com/excusemewtf_ctf">excusemewtf</a> for taking the top spots!</p>
 <h2 id="challenge">Challenge</h2>
 <p>First, I browsed to port 80 and was met with this screen:</p>
-<p><img src="images/metasploit-ctf_2020/port80.png" alt="80"></p>
+<p><img src="https://mike-boya.github.io/images/metasploit-ctf_2020/port80.png" alt="80"></p>
 <p>Interesting, I kicked off a <strong>gobuster</strong> scan but returned to find no results. The icon in the top left looked suspicious, so I loaded it directly.</p>
-<p><img src="images/metasploit-ctf_2020/ms_logo.png" alt="ms logo"></p>
+<p><img src="https://mike-boya.github.io/images/metasploit-ctf_2020/ms_logo.png" alt="ms logo"></p>
 <p>Wow, a QR code&hellip;</p>
 <p>SPOILERS BELOW - The picture linked above is the exact image from the challenge, so feel free to give it a shot before reading the solution.</p>
 <h2 id="solution">Solution</h2>
 <p>I cleaned up the QR code with <strong>gimp</strong> in order to scan it.</p>
-<p><img src="images/metasploit-ctf_2020/cleaned_qr.png" alt="cleaned QR"></p>
+<p><img src="https://mike-boya.github.io/images/metasploit-ctf_2020/cleaned_qr.png" alt="cleaned QR"></p>
 <p>Now, time to scan. I used <a href="https://zxing.org/w/decode.jspx">zxing</a>:</p>
-<p><img src="images/metasploit-ctf_2020/qr_decode.png" alt="zxing"></p>
+<p><img src="https://mike-boya.github.io/images/metasploit-ctf_2020/qr_decode.png" alt="zxing"></p>
 <p>Well, that's no flag. However, this output reminded us of a similar message we encountered during the initial enumeration of the box.</p>
 <p>During the initial enumeration we ran a full <strong>nmap</strong> scan:</p>
-<p><img src="images/metasploit-ctf_2020/nmap_all_ports.png" alt="Nmap"></p>
+<p><img src="https://mike-boya.github.io/images/metasploit-ctf_2020/nmap_all_ports.png" alt="Nmap"></p>
 <p>We saw port 1994 open, so we ran some quick tests against it:</p>
-<p><img src="images/metasploit-ctf_2020/1994.png" alt="Port 1994"></p>
+<p><img src="https://mike-boya.github.io/images/metasploit-ctf_2020/1994.png" alt="Port 1994"></p>
 <p>See, this also mentions a cigar. I did attempt to submit the QR code and full ms_logo to the port with <strong>nc</strong> but no luck. I started analyzing the ms_logo image with a number of Stego tools, but wasn't getting any usable results. However, that band of color in the top left corner kept bothering me. I took a closer look with <strong>gimp</strong>:</p>
-<p><img src="images/metasploit-ctf_2020/color-band.png" alt="Color Band"></p>
+<p><img src="https://mike-boya.github.io/images/metasploit-ctf_2020/color-band.png" alt="Color Band"></p>
 <p>Then, I wrote a small Python script to print out those unique pixels:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image
 
@@ -476,9 +476,9 @@ rgb_im <span style="color:#f92672">=</span> im<span style="color:#f92672">.</spa
 <span style="color:#ae81ff">248</span> <span style="color:#ae81ff">246</span> <span style="color:#ae81ff">255</span>
 <span style="color:#ae81ff">246</span> <span style="color:#ae81ff">255</span> <span style="color:#ae81ff">247</span></code></pre></div>
 <p>Now, I don't want anyone reading this post to think I instantly recognized this. I had a suspicion that Least Significant Bit (LSB) stego was a possibility, but I stared at these numbers for awhile and even jumped to other challenges. Finally, I came back and took a look with CyberChef:</p>
-<p><img src="images/metasploit-ctf_2020/cyberchef_lsb_analysis.png" alt="LSB Analysis"></p>
+<p><img src="https://mike-boya.github.io/images/metasploit-ctf_2020/cyberchef_lsb_analysis.png" alt="LSB Analysis"></p>
 <p>I see a pattern here. Let me illustrate it a little better:</p>
-<p><img src="images/metasploit-ctf_2020/lsb.png" alt="LSB"></p>
+<p><img src="https://mike-boya.github.io/images/metasploit-ctf_2020/lsb.png" alt="LSB"></p>
 <p>The least significant bits, four to be exact, are changing. I wrote a Python script to pull these out:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/env python3</span>
 
@@ -494,9 +494,9 @@ im <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python3 colors.py
 <span style="color:#ae81ff">010000110110100001101111011011110111001101100101001000000100110001101001011001100110010100101110001000000100001001110101011101000010000001110111011010000111100100100000011101110110111101110101011011000110010000100000010010010010000001110111011000010110111001110100001000000111010001101111001000000110010001101111001000000110000100100000011101000110100001101001011011100110011100100000011011000110100101101011011001010010000001110100011010000110000101110100001000000111011101101000011001010110111000100000010010010010000001101000011000010111011001100101001000000110100001100001011000110110101101101001011011100110011100111111</span></code></pre></div>
 <p>I collected the binary and ran it through CyberChef:</p>
-<p><img src="images/metasploit-ctf_2020/cyberchef_binary_decode.png" alt="CyberChef Binary Decode"></p>
+<p><img src="https://mike-boya.github.io/images/metasploit-ctf_2020/cyberchef_binary_decode.png" alt="CyberChef Binary Decode"></p>
 <p>That looks like what we have been searching for! Moving back to the port I mentioned earlier, I tried submitting the string:</p>
-<p><img src="images/metasploit-ctf_2020/1994_submission.png" alt="Phrase Submission"></p>
+<p><img src="https://mike-boya.github.io/images/metasploit-ctf_2020/1994_submission.png" alt="Phrase Submission"></p>
 <p>As you can see, it confirms we cracked the code and sends flag data. I redirected this information to a file:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo -n <span style="color:#e6db74">&#34;Choose Life. But why would I want to do a thing like that when I have hacking?&#34;</span> | nc 172.16.1.101 <span style="color:#ae81ff">1994</span> &gt; qr.txt</code></pre></div>
 <p>I opened it in <strong>vim</strong> and deleted the top two lines. The image did open and display fine, but I ran a quick run with <strong>pngcheck</strong> to verify the file:</p>
@@ -515,7 +515,7 @@ ERROR: qr.png</code></pre></div>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pngcheck queen_of_diamonds.png
 OK: queen_of_diamonds.png <span style="color:#f92672">(</span>283x378, 32-bit RGB+alpha, non-interlaced, 89.9%<span style="color:#f92672">)</span>.</code></pre></div>
 <p>After making these modifications, we can view the final flag!</p>
-<p><img src="images/metasploit-ctf_2020/queen_of_diamonds.png" alt="Queen of Diamonds"></p>
+<p><img src="https://mike-boya.github.io/images/metasploit-ctf_2020/queen_of_diamonds.png" alt="Queen of Diamonds"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ queen_of_diamonds.png
 MD5 <span style="color:#f92672">(</span>queen_of_diamonds.png<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 01880728bf92ae2570ce3c0cd4b01d8b</code></pre></div>
 <p>Thanks for reading!</p>
