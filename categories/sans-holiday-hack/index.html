@@ -1,962 +1,476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>SANS Holiday Hack - Mike Boya</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-
-    
-        
-    
-
-
-
-
-<!DOCTYPE HTML>
-
-<html>
-    <head>
-        <script type="application/ld+json">
-    {
-        "@context" : "http://schema.org",
-        "@type" : "BlogPosting",
-        "mainEntityOfPage": {
-             "@type": "WebPage",
-             "@id": "https:\/\/mike-boya.github.io\/"
-        },
-        "articleSection" : "categories",
-        "name" : "SANS Holiday Hack",
-        "headline" : "SANS Holiday Hack",
-        "description" : "",
-        "inLanguage" : "en",
-        "author" : "",
-        "creator" : "",
-        "publisher": "",
-        "accountablePerson" : "",
-        "copyrightHolder" : "",
-        "copyrightYear" : "2019",
-        "datePublished": "2019-01-17 00:00:00 \u002b0000 UTC",
-        "dateModified" : "2019-01-17 00:00:00 \u002b0000 UTC",
-        "url" : "https:\/\/mike-boya.github.io\/categories\/sans-holiday-hack\/",
-        "wordCount" : "0",
-        "keywords" : [ "Blog" ]
-    }
-    </script>
-        
-            <title>SANS Holiday Hack Posts - Mike Boya</title>
-        
-
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.75.1" />
-        
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/favicon/site.webmanifest?v=1">
   
-    
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1">
   
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
 
-  
-
-  <link rel="apple-touch-icon-precomposed" href='https://mike-boya.github.io/favicon/apple-touch-icon-precomposed.png'>
-  <link rel="icon" href='https://mike-boya.github.io/favicon/favicon.png'>
-  
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-TileImage" content='/favicon/mstile.png'>
-  <meta name="application-name" content="Mike Boya">
-  <meta name="msapplication-tooltip" content="Information Security">
-  <meta name="msapplication-config" content='/favicon/ieconfig.xml'>
-
-
-
-        
-        
-            
-                <meta name="description" content="Information Security">
-            
-        
-
-        <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="SANS Holiday Hack"/>
-<meta name="twitter:description" content="Information Security"/>
-<meta name="twitter:site" content="@mikeboya"/>
-
-        <meta property="og:title" content="SANS Holiday Hack" />
-<meta property="og:description" content="Information Security" />
+<meta name="generator" content="Hugo 0.75.1" /><meta itemprop="name" content="SANS Holiday Hack">
+<meta itemprop="description" content="">
+<meta property="og:title" content="SANS Holiday Hack" />
+<meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://mike-boya.github.io/categories/sans-holiday-hack/" />
 <meta property="og:updated_time" content="2019-01-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SANS Holiday Hack"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@mikeboya"/>
+<link rel="stylesheet" href="/css/bundle.min.d9e04ae08c9b3049b766dbd4aeab7d862c5ea1d13679b621490e0f5df5507497.css" integrity="sha256-2eBK4IybMEm3ZtvUrqt9hixeodE2ebYhSQ4PXfVQdJc="><link rel="stylesheet" href="/css/add-on.css">
+</head>
 
-        <meta property="og:image" content="https://mike-boya.github.io//images/logo.png">
-        <meta property="og:image:type" content="image/png">
-        <meta property="og:image:width" content="512">
-        <meta property="og:image:height" content="512">
-        <meta itemprop="name" content="SANS Holiday Hack">
-<meta itemprop="description" content="Information Security">
+  <body>
+    
 
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/" class="nav">
         
+          categories
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/" class="nav link"><i class='fa fa-home'></i> Home</a>
+        
+      
+        
+          
+          <a href="/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+        
+      
+        
+          
+          <a href="/blog/" class="nav link"><i class='far fa-newspaper'></i> Blog</a>
+        
+      
+        
+          
+          <a href="/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
+        
+      
+        
+          
+          <a href="/contact/" class="nav link"><i class='far fa-envelope'></i> Contact</a>
+        
+      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
 
-        
-            
-        
 
-        
-        
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
-            <link rel="stylesheet" href="https://mike-boya.github.io/css/main.css">
-            <link rel="stylesheet" href="https://mike-boya.github.io/css/add-on.css">
-            <link rel="stylesheet" href="https://mike-boya.github.io/css/academicons.min.css">
-        
-
-        
-            
-                
-            
-        
 
 
   
     
-    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+    <a href="//twitter.com/share?text=SANS%20Holiday%20Hack&amp;url=https%3a%2f%2fmike-boya.github.io%2fcategories%2fsans-holiday-hack%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmike-boya.github.io%2fcategories%2fsans-holiday-hack%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fmike-boya.github.io%2fcategories%2fsans-holiday-hack%2f&amp;title=SANS%20Holiday%20Hack" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fmike-boya.github.io%2fcategories%2fsans-holiday-hack%2f&amp;title=SANS%20Holiday%20Hack" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fmike-boya.github.io%2fcategories%2fsans-holiday-hack%2f&amp;description=SANS%20Holiday%20Hack" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fmike-boya.github.io%2fcategories%2fsans-holiday-hack%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
   
 
 
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="https://mike-boya.github.io/images/logo.jpg" class="circle" width="100" alt="Logo" /></a>
+  <header>
+    <h1>Mike Boya</h1>
+  </header>
+  <main>
+    <p>Infosec Blog</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+        <li><a href="//github.com/mike-boya" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/mike-boya-a444a927" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/mikeboya" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  
+  
+    <article class="post">
+  <header>
+  <div class="title">
+    
+      <h2><a href="/blog/sans-holiday-challenge-2018-writeup/">SANS Holiday Challenge 2018 - Writeup</a></h2>
+    
+    
+  </div>
+  <div class="meta">
+    <time datetime="2019-01-17 00:00:00 &#43;0000 UTC">January 17, 2019</time>
+    
+    <p>23-Minute Read</p>
+  </div>
+</header>
+
+  <div class="content">
+    
+    
+    <p>Hello and Happy New Year! This year&rsquo;s Holiday Hack Challenge theme was an online conference called KringleCon, a cyber security conference hosted by Santa and his elves. It had all the elements of an in-person conference, including talks, badges, swag and the ability to network with other attendees. The challenge was to solve all 10 objectives and each of the &ldquo;Cranberry Pi&rdquo; mini-challenges.</p>
+  </div>
+  <footer>
+    <a href="/blog/sans-holiday-challenge-2018-writeup/" class="button big">Read More</a>
+    <div class="stats">
+  
+    <ul class="categories">
       
+        
+          <li><a class="article-terms-link" href="/categories/ctf/">CTF</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/sans-holiday-hack/">SANS Holiday Hack</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      <li>None</li>
+    </ul>
+  
+</div>
+
+  </footer>
+</article>
+
+  
+    <article class="post">
+  <header>
+  <div class="title">
+    
+      <h2><a href="/blog/sans-holiday-challenge-2015-writeup/">SANS Holiday Challenge 2015 - Writeup</a></h2>
+    
+    
+  </div>
+  <div class="meta">
+    <time datetime="2016-03-02 00:00:00 &#43;0000 UTC">March 2, 2016</time>
+    
+    <p>27-Minute Read</p>
+  </div>
+</header>
+
+  <div class="content">
+    
+    
+    <p>The SANS Holiday Hack challenge this year was fantastic and I wanted to make sure
+to document my solutions on my blog. I have participated in the Holiday Hack Challenges since 2012, but haven&rsquo;t documented them with the exception of some informal notes &ndash; maybe I should change that! Anyway, enjoy my write-up and I encourage anyone who did not participate to give it a try before reading this post!</p>
+  </div>
+  <footer>
+    <a href="/blog/sans-holiday-challenge-2015-writeup/" class="button big">Read More</a>
+    <div class="stats">
+  
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/categories/ctf/">CTF</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/sans-holiday-hack/">SANS Holiday Hack</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      <li>None</li>
+    </ul>
+  
+</div>
+
+  </footer>
+</article>
+
+  
+  <div class="pagination">
+    
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent Posts</h1>
+      </header>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/synology-pushover-notifications/">Synology Pushover Notifications </a></h2>
+          <time class="published" datetime="2020-10-01 00:00:00 &#43;0000 UTC">October 1, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/metasploitctf2020-queen-of-diamonds-write-up/">Metasploit CTF 2020 - Queen Of Diamonds Write-Up</a></h2>
+          <time class="published" datetime="2020-02-04 00:00:00 &#43;0000 UTC">February 4, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/sans-holiday-challenge-2018-writeup/">SANS Holiday Challenge 2018 - Writeup</a></h2>
+          <time class="published" datetime="2019-01-17 00:00:00 &#43;0000 UTC">January 17, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/googlectf-spotted-quoll-write-up/">GoogleCTF - Spotted Quoll Write-Up</a></h2>
+          <time class="published" datetime="2016-05-01 00:00:00 &#43;0000 UTC">May 1, 2016</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/gse-results/">GSE Results</a></h2>
+          <time class="published" datetime="2016-04-21 00:00:00 &#43;0000 UTC">April 21, 2016</time>
+        </header>
+      </article>
+      
+      
+        <footer>
+          <a href="/blog/" class="button">See More</a>
+        </footer>
+      
+    </section>
+  
+
+  
+    
+
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/categories/exploit-exercises/">exploit-exercises<span class="count">20</span></a>
+          
+          <li>
+              <a href="/categories/ctf/">ctf<span class="count">4</span></a>
+          
+          <li>
+              <a href="/categories/sans-holiday-hack/">sans-holiday-hack<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/homelab/">homelab<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/offensive-security/">offensive-security<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/oscp/">oscp<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/stego/">stego<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/synology/">synology<span class="count">1</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>This theme was developed for Hugo static site generator.</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+        <li><a href="//github.com/mike-boya" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/mike-boya-a444a927" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/mikeboya" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+  
+  <p class="copyright">
+    © 2020 Mike Boya
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.75.1' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.5955090a3253deadcd66071270aa2274dabe15ffc97094cec252d87b6f3f00bf.js" integrity="sha256-WVUJCjJT3q3NZgcScKoidNq&#43;Ff/JcJTOwlLYe28/AL8="></script>
+    <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-64695407-1', 'auto');
 	
 	ga('send', 'pageview');
 }
 </script>
-
-    </head>
-    <body>
-
-      
-      <div id="wrapper">
-
-    
-<header id="header">
-    
-      <h1><a href="https://mike-boya.github.io/">categories</a></h1>
-    
-
-    <nav class="links">
-        <ul>
-            
-                <li>
-                    <a href="https://mike-boya.github.io/">
-                            <i class="fa fa-home">&nbsp;</i>Home
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="https://mike-boya.github.io/about/">
-                            <i class="fa fa-id-card-o">&nbsp;</i>About
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="https://mike-boya.github.io/post/">
-                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="https://mike-boya.github.io/itemized/">
-                            <i class="fa fa-list">&nbsp;</i>Itemized
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="https://mike-boya.github.io/categories/">
-                            <i class="fa fa-sitemap">&nbsp;</i>Categories
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="https://mike-boya.github.io/contact/">
-                            <i class="fa fa-envelope-o">&nbsp;</i>Contact
-                    </a>
-                </li>
-            
-        </ul>
-    </nav>
-    <nav class="main">
-        <ul>
-            
-            <li class="search">
-                <a class="fa-search" href="#search">Search</a>
-                <form id="search" method="get" action="//google.com/search">
-                    <input type="text" name="q" placeholder="Search" />
-                    <input type="hidden" name="as_sitesearch" value="https://mike-boya.github.io/">
-                </form>
-            </li>
-            <li class="menu">
-                <a class="fa-bars" href="#menu">Menu</a>
-            </li>
-        </ul>
-    </nav>
-</header>
-
-
-<section id="menu">
-
-    
-        <section>
-            <form class="search" method="get" action="//google.com/search">
-                <input type="text" name="q" placeholder="Search" />
-                <input type="hidden" name="as_sitesearch" value="https://mike-boya.github.io/">
-            </form>
-        </section>
-
-    
-        <section>
-            <ul class="links">
-                
-                    <li>
-                        <a href="https://mike-boya.github.io/">
-                            <h3>
-                                <i class="fa fa-home">&nbsp;</i>Home
-                            </h3>
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://mike-boya.github.io/about/">
-                            <h3>
-                                <i class="fa fa-id-card-o">&nbsp;</i>About
-                            </h3>
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://mike-boya.github.io/post/">
-                            <h3>
-                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
-                            </h3>
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://mike-boya.github.io/itemized/">
-                            <h3>
-                                <i class="fa fa-list">&nbsp;</i>Itemized
-                            </h3>
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://mike-boya.github.io/categories/">
-                            <h3>
-                                <i class="fa fa-sitemap">&nbsp;</i>Categories
-                            </h3>
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://mike-boya.github.io/contact/">
-                            <h3>
-                                <i class="fa fa-envelope-o">&nbsp;</i>Contact
-                            </h3>
-                        </a>
-                    </li>
-                
-            </ul>
-        </section>
-
-    
-        <section class="recent-posts">
-            <div class="mini-posts">
-                <header>
-                    <h3>Recent Posts</h3>
-                </header>
-                
-
-                
-                    
-                
-
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://mike-boya.github.io/post/">Post</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2020-10-01'>
-                                    October 1, 2020</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://mike-boya.github.io/post/synology-pushover-notifications/">Synology Pushover Notifications </a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2020-10-01'>
-                                    October 1, 2020</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://mike-boya.github.io/post/metasploitctf2020-queen-of-diamonds-write-up/">Metasploit CTF 2020 - Queen Of Diamonds Write-Up</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2020-02-04'>
-                                    February 4, 2020</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://mike-boya.github.io/post/sans-holiday-challenge-2018-writeup/">SANS Holiday Challenge 2018 - Writeup</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-01-17'>
-                                    January 17, 2019</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://mike-boya.github.io/post/googlectf-spotted-quoll-write-up/">GoogleCTF - Spotted Quoll Write-Up</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2016-05-01'>
-                                    May 1, 2016</time>
-                            </header>
-                            
-
-                        </article>
-                
-
-                
-                    <a href=
-                        
-                            /post/
-                        
-                        class="button">View more posts</a>
-                
-            </div>
-        </section>
-
-    
-        
-</section>
-
-    
-    <div id="main">
-        <h1>SANS Holiday Hack</h1>
-        
-        
-            <article class="post">
-  <header>
-    <div class="title">
-        
-            <h2><a href="https://mike-boya.github.io/post/sans-holiday-challenge-2018-writeup/">SANS Holiday Challenge 2018 - Writeup</a></h2>
-        
-        
-    </div>
-    <div class="meta">
-        
-
-        <time class="published"
-            datetime='2019-01-17'>
-            January 17, 2019</time>
-        <span class="author"></span>
-        
-            <p>23 minute read</p>
-        
-        
-    </div>
-</header>
-
-  
-
-  
-  <p>Hello and Happy New Year! This year&rsquo;s Holiday Hack Challenge theme was an online conference called KringleCon, a cyber security conference hosted by Santa and his elves. It had all the elements of an in-person conference, including talks, badges, swag and the ability to network with other attendees. The challenge was to solve all 10 objectives and each of the &ldquo;Cranberry Pi&rdquo; mini-challenges.</p>
-  <footer>
-    <ul class="actions">
-      <li><a href="https://mike-boya.github.io/post/sans-holiday-challenge-2018-writeup/" class="button big">Continue Reading</a></li>
-    </ul>
-  <ul class="stats">
-  <li class="categories">
-    <ul>
-        
-            
-            
-                <i class="fa fa-folder"></i>
-                
-                
-                <li><a class="article-category-link" href="https://mike-boya.github.io/categories/ctf">CTF</a></li>
-                
-                
-                <li><a class="article-category-link" href="https://mike-boya.github.io/categories/sans-holiday-hack">SANS Holiday Hack</a></li>
-                
-            
-        
-    </ul>
-  </li>
-  <li class="tags">
-    <ul>
-        
-    </ul>
-  </li>
-</ul>
-
-  </footer>
-</article>
-
-        
-            <article class="post">
-  <header>
-    <div class="title">
-        
-            <h2><a href="https://mike-boya.github.io/post/sans-holiday-challenge-2015-writeup/">SANS Holiday Challenge 2015 - Writeup</a></h2>
-        
-        
-    </div>
-    <div class="meta">
-        
-
-        <time class="published"
-            datetime='2016-03-02'>
-            March 2, 2016</time>
-        <span class="author"></span>
-        
-            <p>27 minute read</p>
-        
-        
-    </div>
-</header>
-
-  
-
-  
-  <p>The SANS Holiday Hack challenge this year was fantastic and I wanted to make sure
-to document my solutions on my blog. I have participated in the Holiday Hack Challenges since 2012, but haven&rsquo;t documented them with the exception of some informal notes &ndash; maybe I should change that! Anyway, enjoy my write-up and I encourage anyone who did not participate to give it a try before reading this post!</p>
-  <footer>
-    <ul class="actions">
-      <li><a href="https://mike-boya.github.io/post/sans-holiday-challenge-2015-writeup/" class="button big">Continue Reading</a></li>
-    </ul>
-  <ul class="stats">
-  <li class="categories">
-    <ul>
-        
-            
-            
-                <i class="fa fa-folder"></i>
-                
-                
-                <li><a class="article-category-link" href="https://mike-boya.github.io/categories/ctf">CTF</a></li>
-                
-                
-                <li><a class="article-category-link" href="https://mike-boya.github.io/categories/sans-holiday-hack">SANS Holiday Hack</a></li>
-                
-            
-        
-    </ul>
-  </li>
-  <li class="tags">
-    <ul>
-        
-    </ul>
-  </li>
-</ul>
-
-  </footer>
-</article>
-
-        
-
-        
-<ul class="actions pagination">
-    
-        <li><a href="#" class="disabled button big previous">Previous Page</a></li>
-    
-
-    
-        <li><a href="#" class="disabled button big next">Next Page</a></li>
-    
-</ul>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
     </div>
-    
-<section id="sidebar">
-
-  
-  <section id="intro">
-    
-    
-      
-        <a href='https://mike-boya.github.io/'><img src="https://mike-boya.github.io/images/logo.jpg" class="intro-circle" width="" alt="Logo" /></a>
-      
-    
-    
-      <header>
-        <h2>Mike Boya</h2>
-        <p>Infosec Blog</p>
-      </header>
-    
-    
-      <ul class="icons">
-        
-        
-  <li><a href="//github.com/mike-boya" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <li><a href="//linkedin.com/in/mike-boya-a444a927" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <li><a href="//twitter.com/mikeboya" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </ul>
-    
-  </section>
-
-  
-  <section class="recent-posts">
-    <div class="mini-posts">
-      <header>
-        <h3>Recent Posts</h3>
-      </header>
-      <div class="posts-container">
-        
-
-        
-          
-        
-
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://mike-boya.github.io/post/">Post</a>
-              </h3>
-              
-              <time class="published" datetime='2020-10-01'>
-                October 1, 2020
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://mike-boya.github.io/post/synology-pushover-notifications/">Synology Pushover Notifications </a>
-              </h3>
-              
-              <time class="published" datetime='2020-10-01'>
-                October 1, 2020
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://mike-boya.github.io/post/metasploitctf2020-queen-of-diamonds-write-up/">Metasploit CTF 2020 - Queen Of Diamonds Write-Up</a>
-              </h3>
-              
-              <time class="published" datetime='2020-02-04'>
-                February 4, 2020
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://mike-boya.github.io/post/sans-holiday-challenge-2018-writeup/">SANS Holiday Challenge 2018 - Writeup</a>
-              </h3>
-              
-              <time class="published" datetime='2019-01-17'>
-                January 17, 2019
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://mike-boya.github.io/post/googlectf-spotted-quoll-write-up/">GoogleCTF - Spotted Quoll Write-Up</a>
-              </h3>
-              
-              <time class="published" datetime='2016-05-01'>
-                May 1, 2016
-              </time>
-            </header>
-            
-
-          </article>
-        
-      </div>
-
-      
-        <a href=
-          
-            /post/
-          
-        class="button">View more posts</a>
-      
-    </div>
-  </section>
-
-  
-  
-  
-  
-  
-    <section id="categories">
-      <header>
-        <h3>
-          <a href="https://mike-boya.github.io/categories/">Categories</a>
-        </h3>
-      </header>
-        
-          
-        
-
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="https://mike-boya.github.io/categories/exploit-exercises/">exploit-exercises</a>
-                <span style="float:right;">20</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="https://mike-boya.github.io/categories/ctf/">ctf</a>
-                <span style="float:right;">4</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="https://mike-boya.github.io/categories/sans-holiday-hack/">sans-holiday-hack</a>
-                <span style="float:right;">2</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="https://mike-boya.github.io/categories/homelab/">homelab</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="https://mike-boya.github.io/categories/offensive-security/">offensive-security</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="https://mike-boya.github.io/categories/oscp/">oscp</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="https://mike-boya.github.io/categories/stego/">stego</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="https://mike-boya.github.io/categories/synology/">synology</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-    </section>
-  
-  
-
-  
-  
-
-  
-  <section id="footer">
-    
-      <ul class="icons">
-        
-        
-  <li><a href="//github.com/mike-boya" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <li><a href="//linkedin.com/in/mike-boya-a444a927" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <li><a href="//twitter.com/mikeboya" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </ul>
-    
-    <p class="copyright">
-      
-        &copy; 2020
-        
-          Mike Boya
-        
-      .
-      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
-    </p>
-  </section>
-</section>
-
-    </div>
-    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
-    
-
-    
-      
-    
-
-    
-      
-      
-      
-        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
-        
-        
-        
-        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
-        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
-        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
-        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
-      
-    
-    
-    
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
-      <script src="https://mike-boya.github.io/js/util.js"></script>
-      <script src="https://mike-boya.github.io/js/main.js"></script>
-      <script src="https://mike-boya.github.io/js/backToTop.js"></script>
-    
-
-    
-      
-        
-      
-    
-
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-      <script src="//yihui.name/js/math-code.js"></script>
-<script async
-src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
-
   </body>
 </html>
-

@@ -5,14 +5,13 @@
     <link>https://mike-boya.github.io/categories/stego/</link>
     <description>Recent content in Stego on Mike Boya</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <lastBuildDate>Tue, 04 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://mike-boya.github.io/categories/stego/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Metasploit CTF 2020 - Queen Of Diamonds Write-Up</title>
-      <link>https://mike-boya.github.io/post/metasploitctf2020-queen-of-diamonds-write-up/</link>
+      <link>https://mike-boya.github.io/blog/metasploitctf2020-queen-of-diamonds-write-up/</link>
       <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/metasploitctf2020-queen-of-diamonds-write-up/</guid>
+      <guid>https://mike-boya.github.io/blog/metasploitctf2020-queen-of-diamonds-write-up/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;p&gt;My team and I participated in the Metasploit CTF this past week and came in third place! I wanted to write up a solution for one of my favorite challenges.&lt;/p&gt;
 &lt;p&gt;Special thanks to the Metasploit team for creating another great CTF and congrats to team pepega and &lt;a href=&#34;https://twitter.com/excusemewtf_ctf&#34;&gt;excusemewtf&lt;/a&gt; for taking the top spots!&lt;/p&gt;

@@ -5,14 +5,13 @@
     <link>https://mike-boya.github.io/</link>
     <description>Recent content on Mike Boya</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://mike-boya.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Synology Pushover Notifications </title>
-      <link>https://mike-boya.github.io/post/synology-pushover-notifications/</link>
+      <link>https://mike-boya.github.io/blog/synology-pushover-notifications/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/synology-pushover-notifications/</guid>
+      <guid>https://mike-boya.github.io/blog/synology-pushover-notifications/</guid>
       <description>Intro I recently added a Synology NAS to my home lab and I am an instant fan. I have been spending time configuring and tinkering with the new device.
 I use Pushover for sending push notifications from various home lab services to my devices. For example, I have it integrated in Home Assistant for reminders and notifications about unique automations.
 When configuring notifications on the NAS, I noticed a &amp;ldquo;Push Service&amp;rdquo; tab and thought, &amp;ldquo;Great!</description>
@@ -20,10 +19,10 @@ When configuring notifications on the NAS, I noticed a &amp;ldquo;Push Service&a
     
     <item>
       <title>Metasploit CTF 2020 - Queen Of Diamonds Write-Up</title>
-      <link>https://mike-boya.github.io/post/metasploitctf2020-queen-of-diamonds-write-up/</link>
+      <link>https://mike-boya.github.io/blog/metasploitctf2020-queen-of-diamonds-write-up/</link>
       <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/metasploitctf2020-queen-of-diamonds-write-up/</guid>
+      <guid>https://mike-boya.github.io/blog/metasploitctf2020-queen-of-diamonds-write-up/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;p&gt;My team and I participated in the Metasploit CTF this past week and came in third place! I wanted to write up a solution for one of my favorite challenges.&lt;/p&gt;
 &lt;p&gt;Special thanks to the Metasploit team for creating another great CTF and congrats to team pepega and &lt;a href=&#34;https://twitter.com/excusemewtf_ctf&#34;&gt;excusemewtf&lt;/a&gt; for taking the top spots!&lt;/p&gt;
@@ -56,20 +55,20 @@ When configuring notifications on the NAS, I noticed a &amp;ldquo;Push Service&a
     
     <item>
       <title>SANS Holiday Challenge 2018 - Writeup</title>
-      <link>https://mike-boya.github.io/post/sans-holiday-challenge-2018-writeup/</link>
+      <link>https://mike-boya.github.io/blog/sans-holiday-challenge-2018-writeup/</link>
       <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/sans-holiday-challenge-2018-writeup/</guid>
+      <guid>https://mike-boya.github.io/blog/sans-holiday-challenge-2018-writeup/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;p&gt;Hello and Happy New Year! This year&amp;rsquo;s Holiday Hack Challenge theme was an online conference called KringleCon, a cyber security conference hosted by Santa and his elves. It had all the elements of an in-person conference, including talks, badges, swag and the ability to network with other attendees. The challenge was to solve all 10 objectives and each of the &amp;ldquo;Cranberry Pi&amp;rdquo; mini-challenges.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GoogleCTF - Spotted Quoll Write-Up</title>
-      <link>https://mike-boya.github.io/post/googlectf-spotted-quoll-write-up/</link>
+      <link>https://mike-boya.github.io/blog/googlectf-spotted-quoll-write-up/</link>
       <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/googlectf-spotted-quoll-write-up/</guid>
+      <guid>https://mike-boya.github.io/blog/googlectf-spotted-quoll-write-up/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;p&gt;I participated in the Google CTF this weekend and really enjoyed the challenges. Here is a
 write-up of one of my solutions.&lt;/p&gt;
@@ -82,20 +81,20 @@ write-up of one of my solutions.&lt;/p&gt;
     
     <item>
       <title>GSE Results</title>
-      <link>https://mike-boya.github.io/post/gse-results/</link>
+      <link>https://mike-boya.github.io/blog/gse-results/</link>
       <pubDate>Thu, 21 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/gse-results/</guid>
+      <guid>https://mike-boya.github.io/blog/gse-results/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s official, I received the email from SANS letting me know that I earned the GSE certification! I am GSE #141 in a group of impressive information security professionals.&lt;/p&gt;
 &lt;p&gt;There are a ton of people that I would like to thank, including co-workers and friends. I would also like to thank Chris Sanders (GSE #64) for just being awesome and fielding some of my questions. Lastly, I would like to thank my lovely fiancée, Sophie, for putting up with my constant study and the late nights where, in her own words, I am &amp;ldquo;in the Matrix.&amp;rdquo;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>SANS Holiday Challenge 2015 - Writeup</title>
-      <link>https://mike-boya.github.io/post/sans-holiday-challenge-2015-writeup/</link>
+      <link>https://mike-boya.github.io/blog/sans-holiday-challenge-2015-writeup/</link>
       <pubDate>Wed, 02 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/sans-holiday-challenge-2015-writeup/</guid>
+      <guid>https://mike-boya.github.io/blog/sans-holiday-challenge-2015-writeup/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;p&gt;The SANS Holiday Hack challenge this year was fantastic and I wanted to make sure
 to document my solutions on my blog. I have participated in the Holiday Hack Challenges since 2012, but haven&amp;rsquo;t documented them with the exception of some informal notes &amp;ndash; maybe I should change that! Anyway, enjoy my write-up and I encourage anyone who did not participate to give it a try before reading this post!&lt;/p&gt;</description>
@@ -103,10 +102,10 @@ to document my solutions on my blog. I have participated in the Holiday Hack Cha
     
     <item>
       <title>Exploit Exercises Nebula Level15</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level15/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level15/</link>
       <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level15/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level15/</guid>
       <description>&lt;p&gt;The &lt;em&gt;About&lt;/em&gt; section for &lt;a href=&#34;https://exploit-exercises.com/nebula/level15/&#34; title=&#34;Level15&#34;&gt;Level15&lt;/a&gt; contains the following instructions:&lt;/p&gt;
 &lt;p&gt;&amp;ldquo;strace the binary at /home/flag15/flag15 and see if you spot anything out of the ordinary.&lt;/p&gt;
 &lt;p&gt;You may wish to review how to “compile a shared library in linux” and how the libraries are loaded and processed by reviewing the dlopen manpage in depth.&lt;/p&gt;
@@ -115,10 +114,10 @@ to document my solutions on my blog. I have participated in the Holiday Hack Cha
     
     <item>
       <title>Exploit Exercises Nebula Level16</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level16/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level16/</link>
       <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level16/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level16/</guid>
       <description>&lt;p&gt;For &lt;a href=&#34;https://exploit-exercises.com/nebula/level16/&#34; title=&#34;Level16&#34;&gt;Level16&lt;/a&gt;, we are told that a perl script is running on port 1616.&lt;/p&gt;
 &lt;p&gt;The source code for that script is provided:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    #!/usr/bin/env perl
@@ -163,10 +162,10 @@ to document my solutions on my blog. I have participated in the Holiday Hack Cha
     
     <item>
       <title>Exploit Exercises Nebula Level17</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level17/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level17/</link>
       <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level17/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level17/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://exploit-exercises.com/nebula/level17/&#34; title=&#34;Level17&#34;&gt;Level17&lt;/a&gt; dictates, &amp;ldquo;There is a python script listening on port 10007 that contains a vulnerability.&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;Python! Nice. The nebula war game is using a variety of languages, which is fantastic. We are provided with the following source code:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    #!/usr/bin/python
@@ -203,10 +202,10 @@ to document my solutions on my blog. I have participated in the Holiday Hack Cha
     
     <item>
       <title>Exploit Exercises Nebula Level18</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level18/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level18/</link>
       <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level18/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level18/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://exploit-exercises.com/nebula/level18/&#34; title=&#34;Level18&#34;&gt;Level18&lt;/a&gt; provides us with this large snippet of code:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    #include &amp;lt;stdlib.h&amp;gt;
     #include &amp;lt;unistd.h&amp;gt;
@@ -334,10 +333,10 @@ to document my solutions on my blog. I have participated in the Holiday Hack Cha
     
     <item>
       <title>Exploit Exercises Nebula Level19</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level19/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level19/</link>
       <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level19/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level19/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://exploit-exercises.com/nebula/level19/&#34; title=&#34;Level19&#34;&gt;Level19&lt;/a&gt; provides us with the following code:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    #include &amp;lt;stdlib.h&amp;gt;
     #include &amp;lt;unistd.h&amp;gt;
@@ -383,10 +382,10 @@ to document my solutions on my blog. I have participated in the Holiday Hack Cha
     
     <item>
       <title>Exploit Exercises Nebula Level13</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level13/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level13/</link>
       <pubDate>Sat, 20 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level13/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level13/</guid>
       <description>&lt;p&gt;In &lt;a href=&#34;https://exploit-exercises.com/nebula/level13/&#34; title=&#34;Level13&#34;&gt;Level13&lt;/a&gt; we are given the following code:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    #include &amp;lt;stdlib.h&amp;gt;
     #include &amp;lt;unistd.h&amp;gt;
@@ -419,20 +418,20 @@ to document my solutions on my blog. I have participated in the Holiday Hack Cha
     
     <item>
       <title>Exploit Exercises Nebula Level14</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level14/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level14/</link>
       <pubDate>Sat, 20 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level14/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level14/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://exploit-exercises.com/nebula/level14/&#34; title=&#34;Level14&#34;&gt;Level14&lt;/a&gt; provides us with these instructions:&lt;/p&gt;
 &lt;p&gt;&amp;ldquo;This program resides in /home/flag14/flag14. It encrypts input and writes it to standard output. An encrypted token file is also in that home directory, decrypt it :)&amp;rdquo;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Exploit Exercises Nebula Level11</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level11/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level11/</link>
       <pubDate>Fri, 19 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level11/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level11/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://exploit-exercises.com/nebula/level11/&#34; title=&#34;Level11&#34;&gt;Level11&lt;/a&gt; provides us with the source code for level11.c:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;      #include &amp;lt;stdlib.h&amp;gt;
       #include &amp;lt;unistd.h&amp;gt;
@@ -542,10 +541,10 @@ to document my solutions on my blog. I have participated in the Holiday Hack Cha
     
     <item>
       <title>Exploit Exercises Nebula Level12</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level12/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level12/</link>
       <pubDate>Fri, 19 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level12/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level12/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://exploit-exercises.com/nebula/level12/&#34; title=&#34;Level12&#34;&gt;Level12&lt;/a&gt; informs us that &amp;ldquo;There is a backdoor process listening on port 50001.&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;We are also provided with &lt;strong&gt;level12.lua&lt;/strong&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    local socket = require(&amp;quot;socket&amp;quot;)
@@ -586,20 +585,20 @@ to document my solutions on my blog. I have participated in the Holiday Hack Cha
     
     <item>
       <title>Exploit Exercises Nebula Level08</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level08/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level08/</link>
       <pubDate>Mon, 15 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level08/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level08/</guid>
       <description>&lt;p&gt;&amp;ldquo;World readable files strike again. Check what that user was up to, and use it to log into flag08 account.&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;This was the verbiage provided in the &lt;em&gt;About&lt;/em&gt; section for &lt;a href=&#34;https://exploit-exercises.com/nebula/level08/&#34; title=&#34;Level08&#34;&gt;level08&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Exploit Exercises Nebula Level09</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level09/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level09/</link>
       <pubDate>Mon, 15 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level09/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level09/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://exploit-exercises.com/nebula/level09/&#34; title=&#34;Level09&#34;&gt;Level09&lt;/a&gt; provides us with a C setuid wrapper for some vulnerable PHP code.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    &amp;lt;?php
 
@@ -634,10 +633,10 @@ to document my solutions on my blog. I have participated in the Holiday Hack Cha
     
     <item>
       <title>Exploit Exercises Nebula Level10</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level10/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level10/</link>
       <pubDate>Mon, 15 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level10/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level10/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://exploit-exercises.com/nebula/level10/&#34; title=&#34;Level10&#34;&gt;level10&lt;/a&gt; provides us with the following source code:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    #include &amp;lt;stdlib.h&amp;gt;
     #include &amp;lt;unistd.h&amp;gt;
@@ -722,10 +721,10 @@ the use of this system call should be avoided.&amp;rdquo; - Let&amp;rsquo;s see 
     
     <item>
       <title>Exploit Exercises Nebula Level07</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level07/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level07/</link>
       <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level07/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level07/</guid>
       <description>&lt;p&gt;The next level provides us with some perl code:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    #!/usr/bin/perl
 
@@ -753,20 +752,20 @@ the use of this system call should be avoided.&amp;rdquo; - Let&amp;rsquo;s see 
     
     <item>
       <title>Exploit Exercises Nebula Level06</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level06/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level06/</link>
       <pubDate>Tue, 09 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level06/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level06/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://exploit-exercises.com/nebula/level06/&#34; title=&#34;Level06&#34;&gt;Level06&lt;/a&gt; specifies that &amp;ldquo;The &lt;strong&gt;flag06&lt;/strong&gt; account credentials came from a legacy unix system.&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;I believe the hint spells out exactly what we need to solve this level.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Exploit Exercises - Nebula Level05</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level05/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level05/</link>
       <pubDate>Mon, 08 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level05/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level05/</guid>
       <description>&lt;p&gt;[Level05] instructs us to &amp;ldquo;Check the flag05 home directory. You are looking for weak directory permissions&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;After navigating over to /home/flag05, we take a look at the permissions.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    level05@nebula:~$ pushd /home/flag05/
@@ -784,10 +783,10 @@ the use of this system call should be avoided.&amp;rdquo; - Let&amp;rsquo;s see 
     
     <item>
       <title>Quick Update</title>
-      <link>https://mike-boya.github.io/post/quick-update/</link>
+      <link>https://mike-boya.github.io/blog/quick-update/</link>
       <pubDate>Mon, 19 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/quick-update/</guid>
+      <guid>https://mike-boya.github.io/blog/quick-update/</guid>
       <description>Hi All,
 It has been about two months since my last post. It looks like exploit-exercises is offline (and has been for awhile). I will continue my Nebula write-ups if it ever comes back up, but for now I will move on and continue with some new content.
 I should have another post coming soon, so stay tuned!
@@ -796,74 +795,74 @@ Mike</description>
     
     <item>
       <title>Exploit Exercises - Nebula Level03</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level03/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level03/</link>
       <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level03/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level03/</guid>
       <description>&lt;p&gt;The details page for &lt;a href=&#34;https://exploit-exercises.com/nebula/level03/&#34; title=&#34;Level03&#34;&gt;Level03&lt;/a&gt; contains a hint directing us to the home directory of flag03. After navigating to the target home directory and listing out the files, I was presented with a shell script called writable.sh and a directory called writable.d.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Exploit Exercises - Nebula Level04</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level04/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level04/</link>
       <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level04/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level04/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://exploit-exercises.com/nebula/level04/&#34; title=&#34;Level04&#34;&gt;Level04&lt;/a&gt; was one of my favorite challenges out of the entire series. The post below documents my solution.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Exploit Exercises - Nebula Level01</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level01/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level01/</link>
       <pubDate>Tue, 14 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level01/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level01/</guid>
       <description>&lt;p&gt;The next level, &lt;a href=&#34;https://exploit-exercises.com/nebula/level01/&#34; title=&#34;Level01&#34;&gt;Level01&lt;/a&gt;, provides some C code for the user to evaluate. The code contains a vulnerability that allows arbitrary programs to be executed. This post will outline the steps I took to solve the challenge.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Exploit Exercises - Nebula Level02</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level02/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level02/</link>
       <pubDate>Tue, 14 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level02/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level02/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://exploit-exercises.com/nebula/level02/&#34; title=&#34;Level02&#34;&gt;Level02&lt;/a&gt; instructs us to review some vulnerable C code and locate the attack vector. This program addresses the vulnerability from the previous level but a new vector is available.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Exploit Exercises - Nebula Level00</title>
-      <link>https://mike-boya.github.io/post/exploit-exercises-nebula-level00/</link>
+      <link>https://mike-boya.github.io/blog/exploit-exercises-nebula-level00/</link>
       <pubDate>Fri, 10 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/exploit-exercises-nebula-level00/</guid>
+      <guid>https://mike-boya.github.io/blog/exploit-exercises-nebula-level00/</guid>
       <description>&lt;p&gt;After completing some of my certifications, I decided to get back to some of the challenges and coding practice. My good friend Kristian suggested the war games over at &lt;a href=&#34;https://exploit-exercises.com/&#34; title=&#34;Exploit Exercises&#34;&gt;Exploit Exercises&lt;/a&gt;. Starting with &lt;a href=&#34;https://exploit-exercises.com/nebula/&#34; title=&#34;Nebula&#34;&gt;Nebula&lt;/a&gt;, I will outline some walkthroughs of my solutions to the levels (00-19). I will split each level into a separate post in order to not spoil any of the challenges for someone just looking for a hint on a single level.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://exploit-exercises.com/nebula/level00/&#34; title=&#34;Level00&#34;&gt;Level00&lt;/a&gt; requires you to locate a Set User ID program that will run as the &amp;ldquo;flag00&amp;rdquo; account. The &amp;ldquo;About&amp;rdquo; section hints at checking out the man page for the find command.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Offensive Security Certified Professional (OSCP): My Experience</title>
-      <link>https://mike-boya.github.io/post/offensive-security-certified-professional-oscp-my-experience/</link>
+      <link>https://mike-boya.github.io/blog/offensive-security-certified-professional-oscp-my-experience/</link>
       <pubDate>Tue, 07 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/offensive-security-certified-professional-oscp-my-experience/</guid>
+      <guid>https://mike-boya.github.io/blog/offensive-security-certified-professional-oscp-my-experience/</guid>
       <description>Introduction It was a long ride, but I finally finished my OSCP certification by completing the lab portion and passing the practical exam. I learned so much during the course and earned what I feel is a cert worth its weight in gold. As I have mentioned in previous blog posts, I take pride in guiding my professional development and I felt that taking a hands-on penetration testing course would be a great challenge and learning experience.</description>
     </item>
     
     <item>
       <title>Blog Migration: HelloWorld2</title>
-      <link>https://mike-boya.github.io/post/blog-migration-helloworld2/</link>
+      <link>https://mike-boya.github.io/blog/blog-migration-helloworld2/</link>
       <pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/blog-migration-helloworld2/</guid>
+      <guid>https://mike-boya.github.io/blog/blog-migration-helloworld2/</guid>
       <description>It has been quite a while since I have posted over at IntricateDefense and although I was very busy, I decided that Blogger just wasn&amp;rsquo;t suitable for the type of content I want to share. After some searching and checking in on my buddy Jordan Wright, I decided on Octopress! For those of you who don&amp;rsquo;t know what Octopress is, you can check out (http://octopress.org/) &amp;ndash; there is some fantastic documentation about the blogging framework.</description>
     </item>
     
     <item>
       <title>Infosec Certifications: Are They Really Worth It?</title>
-      <link>https://mike-boya.github.io/post/infosec-certifications-are-they-really-worth-it/</link>
+      <link>https://mike-boya.github.io/blog/infosec-certifications-are-they-really-worth-it/</link>
       <pubDate>Mon, 29 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/infosec-certifications-are-they-really-worth-it/</guid>
+      <guid>https://mike-boya.github.io/blog/infosec-certifications-are-they-really-worth-it/</guid>
       <description>One of the most frequently asked questions I receive from individuals looking to enter the Information Security field is: &amp;ldquo;Should I pursue certifications?&amp;rdquo;
 I have had many in-depth conversation on this topic with my peers, so I&amp;rsquo;ll share my thoughts and logic on the subject here.
 The answer to this question is not black and white &amp;ndash; it is subjective and highly dependent on the individual. I know several smart and knowledgeable professionals with 0 certifications, and an equal number of smart and knowledgeable professionals with 10-20 certs.</description>
@@ -871,10 +870,10 @@ The answer to this question is not black and white &amp;ndash; it is subjective 
     
     <item>
       <title>Introduction</title>
-      <link>https://mike-boya.github.io/post/introduction/</link>
+      <link>https://mike-boya.github.io/blog/introduction/</link>
       <pubDate>Mon, 29 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/introduction/</guid>
+      <guid>https://mike-boya.github.io/blog/introduction/</guid>
       <description>Welcome to my blog!
 This blog will be a logbook for my interests, research and endeavors in the Information Security realm. Topics will vary, but the overall focus will combine offensive and defensive tactics to secure assets.
 I am not looking to get into a red team vs. blue team debate here, because I feel that both sides are necessary in security. The content of this blog will take a holistic view that concentrates on multiple facets of this complicated but rewarding field.</description>

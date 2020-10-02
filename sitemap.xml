@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mike-boya.github.io/blog/</loc>
+    <lastmod>2020-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mike-boya.github.io/categories/</loc>
     <lastmod>2020-10-01T00:00:00+00:00</lastmod>
   </url>
@@ -18,17 +23,12 @@
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/</loc>
-    <lastmod>2020-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mike-boya.github.io/categories/synology/</loc>
     <lastmod>2020-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/synology-pushover-notifications/</loc>
+    <loc>https://mike-boya.github.io/blog/synology-pushover-notifications/</loc>
     <lastmod>2020-10-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/metasploitctf2020-queen-of-diamonds-write-up/</loc>
+    <loc>https://mike-boya.github.io/blog/metasploitctf2020-queen-of-diamonds-write-up/</loc>
     <lastmod>2020-02-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -58,7 +58,7 @@
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/sans-holiday-challenge-2018-writeup/</loc>
+    <loc>https://mike-boya.github.io/blog/sans-holiday-challenge-2018-writeup/</loc>
     <lastmod>2019-01-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -68,17 +68,17 @@
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/googlectf-spotted-quoll-write-up/</loc>
+    <loc>https://mike-boya.github.io/blog/googlectf-spotted-quoll-write-up/</loc>
     <lastmod>2016-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/gse-results/</loc>
+    <loc>https://mike-boya.github.io/blog/gse-results/</loc>
     <lastmod>2016-04-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/sans-holiday-challenge-2015-writeup/</loc>
+    <loc>https://mike-boya.github.io/blog/sans-holiday-challenge-2015-writeup/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -88,107 +88,107 @@
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level15/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level15/</loc>
     <lastmod>2016-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level16/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level16/</loc>
     <lastmod>2016-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level17/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level17/</loc>
     <lastmod>2016-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level18/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level18/</loc>
     <lastmod>2016-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level19/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level19/</loc>
     <lastmod>2016-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level13/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level13/</loc>
     <lastmod>2016-02-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level14/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level14/</loc>
     <lastmod>2016-02-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level11/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level11/</loc>
     <lastmod>2016-02-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level12/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level12/</loc>
     <lastmod>2016-02-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level08/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level08/</loc>
     <lastmod>2016-02-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level09/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level09/</loc>
     <lastmod>2016-02-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level10/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level10/</loc>
     <lastmod>2016-02-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level07/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level07/</loc>
     <lastmod>2016-02-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level06/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level06/</loc>
     <lastmod>2016-02-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level05/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level05/</loc>
     <lastmod>2016-02-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/quick-update/</loc>
+    <loc>https://mike-boya.github.io/blog/quick-update/</loc>
     <lastmod>2015-10-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level03/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level03/</loc>
     <lastmod>2015-08-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level04/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level04/</loc>
     <lastmod>2015-08-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level01/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level01/</loc>
     <lastmod>2015-07-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level02/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level02/</loc>
     <lastmod>2015-07-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/exploit-exercises-nebula-level00/</loc>
+    <loc>https://mike-boya.github.io/blog/exploit-exercises-nebula-level00/</loc>
     <lastmod>2015-07-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -198,7 +198,7 @@
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/offensive-security-certified-professional-oscp-my-experience/</loc>
+    <loc>https://mike-boya.github.io/blog/offensive-security-certified-professional-oscp-my-experience/</loc>
     <lastmod>2015-07-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -208,17 +208,17 @@
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/blog-migration-helloworld2/</loc>
+    <loc>https://mike-boya.github.io/blog/blog-migration-helloworld2/</loc>
     <lastmod>2015-06-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/infosec-certifications-are-they-really-worth-it/</loc>
+    <loc>https://mike-boya.github.io/blog/infosec-certifications-are-they-really-worth-it/</loc>
     <lastmod>2015-06-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mike-boya.github.io/post/introduction/</loc>
+    <loc>https://mike-boya.github.io/blog/introduction/</loc>
     <lastmod>2015-06-29T00:00:00+00:00</lastmod>
   </url>
   

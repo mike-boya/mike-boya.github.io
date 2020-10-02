@@ -5,14 +5,13 @@
     <link>https://mike-boya.github.io/categories/synology/</link>
     <description>Recent content in synology on Mike Boya</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://mike-boya.github.io/categories/synology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Synology Pushover Notifications </title>
-      <link>https://mike-boya.github.io/post/synology-pushover-notifications/</link>
+      <link>https://mike-boya.github.io/blog/synology-pushover-notifications/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/synology-pushover-notifications/</guid>
+      <guid>https://mike-boya.github.io/blog/synology-pushover-notifications/</guid>
       <description>Intro I recently added a Synology NAS to my home lab and I am an instant fan. I have been spending time configuring and tinkering with the new device.
 I use Pushover for sending push notifications from various home lab services to my devices. For example, I have it integrated in Home Assistant for reminders and notifications about unique automations.
 When configuring notifications on the NAS, I noticed a &amp;ldquo;Push Service&amp;rdquo; tab and thought, &amp;ldquo;Great!</description>

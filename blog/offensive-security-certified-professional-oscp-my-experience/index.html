@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Offensive Security Certified Professional (OSCP): My Experience - Mike Boya</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.75.1" /><meta itemprop="name" content="Offensive Security Certified Professional (OSCP): My Experience">
+<meta itemprop="description" content="Introduction It was a long ride, but I finally finished my OSCP certification by completing the lab portion and passing the practical exam. I learned so much during the course and earned what I feel is a cert worth its weight in gold. As I have mentioned in previous blog posts, I take pride in guiding my professional development and I felt that taking a hands-on penetration testing course would be a great challenge and learning experience.">
+<meta itemprop="datePublished" content="2015-07-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2015-07-07T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1268">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="Offensive Security Certified Professional (OSCP): My Experience" />
+<meta property="og:description" content="Introduction It was a long ride, but I finally finished my OSCP certification by completing the lab portion and passing the practical exam. I learned so much during the course and earned what I feel is a cert worth its weight in gold. As I have mentioned in previous blog posts, I take pride in guiding my professional development and I felt that taking a hands-on penetration testing course would be a great challenge and learning experience." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mike-boya.github.io/blog/offensive-security-certified-professional-oscp-my-experience/" />
+<meta property="article:published_time" content="2015-07-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2015-07-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Offensive Security Certified Professional (OSCP): My Experience"/>
+<meta name="twitter:description" content="Introduction It was a long ride, but I finally finished my OSCP certification by completing the lab portion and passing the practical exam. I learned so much during the course and earned what I feel is a cert worth its weight in gold. As I have mentioned in previous blog posts, I take pride in guiding my professional development and I felt that taking a hands-on penetration testing course would be a great challenge and learning experience."/>
+<meta name="twitter:site" content="@mikeboya"/>
+<link rel="stylesheet" href="/css/bundle.min.d9e04ae08c9b3049b766dbd4aeab7d862c5ea1d13679b621490e0f5df5507497.css" integrity="sha256-2eBK4IybMEm3ZtvUrqt9hixeodE2ebYhSQ4PXfVQdJc="><link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/" class="nav">
+        
+          Blog
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/" class="nav link"><i class='fa fa-home'></i> Home</a>
+        
+      
+        
+          
+          <a href="/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+        
+      
+        
+          
+          <a href="/blog/" class="nav link"><i class='far fa-newspaper'></i> Blog</a>
+        
+      
+        
+          
+          <a href="/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
+        
+      
+        
+          
+          <a href="/contact/" class="nav link"><i class='far fa-envelope'></i> Contact</a>
+        
+      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Offensive%20Security%20Certified%20Professional%20%28OSCP%29%3a%20My%20Experience&amp;url=https%3a%2f%2fmike-boya.github.io%2fblog%2foffensive-security-certified-professional-oscp-my-experience%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmike-boya.github.io%2fblog%2foffensive-security-certified-professional-oscp-my-experience%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fmike-boya.github.io%2fblog%2foffensive-security-certified-professional-oscp-my-experience%2f&amp;title=Offensive%20Security%20Certified%20Professional%20%28OSCP%29%3a%20My%20Experience" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fmike-boya.github.io%2fblog%2foffensive-security-certified-professional-oscp-my-experience%2f&amp;title=Offensive%20Security%20Certified%20Professional%20%28OSCP%29%3a%20My%20Experience" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fmike-boya.github.io%2fblog%2foffensive-security-certified-professional-oscp-my-experience%2f&amp;description=Offensive%20Security%20Certified%20Professional%20%28OSCP%29%3a%20My%20Experience" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fmike-boya.github.io%2fblog%2foffensive-security-certified-professional-oscp-my-experience%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="https://mike-boya.github.io/images/logo.jpg" class="circle" width="100" alt="Logo" /></a>
+  <header>
+    <h1>Mike Boya</h1>
+  </header>
+  <main>
+    <p>Infosec Blog</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+        <li><a href="//github.com/mike-boya" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/mike-boya-a444a927" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/mikeboya" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article class="post">
+    <header>
+  <div class="title">
+    
+      <h2><a href="/blog/offensive-security-certified-professional-oscp-my-experience/">Offensive Security Certified Professional (OSCP): My Experience</a></h2>
+    
+    
+  </div>
+  <div class="meta">
+    <time datetime="2015-07-07 00:00:00 &#43;0000 UTC">July 7, 2015</time>
+    
+    <p>6-Minute Read</p>
+  </div>
+</header>
+
+    <div id="socnet-share">
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Offensive%20Security%20Certified%20Professional%20%28OSCP%29%3a%20My%20Experience&amp;url=https%3a%2f%2fmike-boya.github.io%2fblog%2foffensive-security-certified-professional-oscp-my-experience%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmike-boya.github.io%2fblog%2foffensive-security-certified-professional-oscp-my-experience%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fmike-boya.github.io%2fblog%2foffensive-security-certified-professional-oscp-my-experience%2f&amp;title=Offensive%20Security%20Certified%20Professional%20%28OSCP%29%3a%20My%20Experience" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fmike-boya.github.io%2fblog%2foffensive-security-certified-professional-oscp-my-experience%2f&amp;title=Offensive%20Security%20Certified%20Professional%20%28OSCP%29%3a%20My%20Experience" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fmike-boya.github.io%2fblog%2foffensive-security-certified-professional-oscp-my-experience%2f&amp;description=Offensive%20Security%20Certified%20Professional%20%28OSCP%29%3a%20My%20Experience" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fmike-boya.github.io%2fblog%2foffensive-security-certified-professional-oscp-my-experience%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </div>
+    <div class="content">
+      
+      <h2 id="introduction">Introduction</h2>
+<p>It was a long ride, but I finally finished my OSCP certification by completing the lab portion and passing the practical exam. I learned so much during the course and earned what I feel is a cert worth its weight in gold. As I have mentioned in previous blog posts, I take pride in guiding my professional development and I felt that taking a hands-on penetration testing course would be a great challenge and learning experience. This post summarizes my thoughts on the entire course and process.</p>
+<!-- more -->
+<h2 id="course-registration">Course Registration</h2>
+<p>Offensive Security (offsec) offers 30, 60, or 90 days of lab time — I selected the 90 day option. After reading a plethora of reviews, I felt that it would help me to take my time and approach the course in a way that would allow me to learn the most information possible. Just a heads up - registration does require the use of a non-free email address (no gmail, yahoo, etc). I could expand on how the process works, but other reviews do an amazing job and the official FAQ page summarizes some additional info about registration here: <a href="http://www.offensive-security.com/faq/">http://www.offensive-security.com/faq/</a>.</p>
+<h2 id="the-course-materials">The Course Materials</h2>
+<p>The materials are provided to help guide your learning and development. Offsec supplies the student with ~300 page PDF lab guide and a number of video segments. The lab guide contains a number of exercises that will assist with learning by having the student perform the task at hand. I found myself very familiar with some topics (SSH tunneling) and completely in the dark on the others (buffer overflows). I made sure that I took the time to perform extra research and practice the topics I was not as familiar with. I do recommend completing all the exercises, because it pays off in the long run and will even assist you with some of the boxes in the lab.</p>
+<h2 id="the-lab">The Lab</h2>
+<p>The lab is by far the best part about this course. If you have ever spun up a vulnerable VM (metasploitable, De-ICE, etc.) to practice attacking techniques, you know that you need to configure and setup your &ldquo;lab&rdquo; &ndash; which can result in you learning hints about the machine. The Offsec lab gives you access to ~50 machines spread out across four networks that range in difficulty which was quite a change from attacking a single vulnerable VM. As you progress in the lab, you will uncover juicy details about the users and ultimately start to refer to the machines by name - aka &ldquo;last night I rooted pain.&rdquo;</p>
+<p>Personally, I tried to own as much of the lab as possible. It taught me so much and gaining SYSTEM/root on some of the tougher systems definitely prepared me for the practical exam. At the end of my lab time, I got all the systems with the exception of two, I decided to start preparing for the exam instead of completing these boxes.</p>
+<p>In terms of documentation, it really comes down to the student. The course guide recommends KeepNote, but I was more comfortable creating a directory structure and working with flat files that aligned with my daily process at work and my IR experience. My advice is to find what style works for you and document as much as possible. Enumeration is key and it is worth keeping all of your enumeration results so you can rotate to different machines in the lab and not re-scan every time.</p>
+<p>If I could change one thing about my lab time, I would have drafted the final report as I went along. I read reviews that mentioned the same tactic but it is difficult to type up your step-by-step guide when you are running around your house celebrating because you got root! I did, however, use this tactic for the exam, which I describe later.</p>
+<p>When I was concentrating on the lab, I spent around four hours a day during the week and up to eight hours on the weekends. Just a quick warning - as soon as you sign up for this course and commit to spending all your time doing it, life will get in the way. Be prepared to isolate yourself to get it done. You need to put in the proper time to truly get the most out of this course.</p>
+<h2 id="the-exam">The Exam</h2>
+<p>As many other OSCP reviews have mentioned, there are limitations on the use of Metasploit as well as automated vulnerability scanners such as Nessus or OpenVAS. I wouldn&rsquo;t lean on these tools too heavily in the lab but do not avoid them either. The lab is there for you to try different tools and techniques and there are different ways into each box, use that practice time to your advantage.</p>
+<p>Offsec allots you 24 hours to complete the exam and 24 hours to draft your accompanying report. I scheduled the exam for Saturday morning and ensured that I had enough coffee, snacks, energy drinks, music, etc. for the full 48-hour period. I received the email right on time, dove into the exam guide, connected to the VPN and buckled down on achieving my goal. After about eight hours, I had enough points to pass and I focused on gathering all the information and forming a rough draft of screenshots and evidence for my report to simply the report generation. I spent another two hours drafting a complete report. The next morning, I woke up and proofread the report, and finished tweaking any formatting. After I felt comfortable with my documentation, I submitted my report and received the notification that Offensive Security had received my deliverables. I should have felt confident at this point, but I couldn&rsquo;t fight the doubt that I had forgotten something. All that was eradicated when I received the notice that I had successfully completed the certification challenge early Tuesday morning.</p>
+<p>As far as recommendations for the exam, make sure that you are prepared for highs and lows. There will be times during your 24 hours that you will doubt your skills and think you were not ready for the test &ndash; use that time to take a break and go for a walk or grab some grub. The other tips I have for the exam are: 1.) Enumerate until you understand the box like the SysAdmin would &ndash; what&rsquo;s running, any special configurations, any vulnerable versions? 2.) Organize your time and don&rsquo;t become hyper-focused on one machine, multitasking helps. 3.) Compile a very rough draft of your report as you go. It was so helpful to have everything prepared and laid out for my report before my VPN access was clipped. It reduced my stress about missing something important. Don&rsquo;t get too excited when you root a box and forget to collect the associated information and screenshots.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This was the most challenging and rewarding course that I have ever experienced. You truly get what you put in with the OSCP. I spent hours (cough&hellip; cough&hellip; days) on some of these machines and learned so much by trying different attacks in the immense &ldquo;playground&rdquo; that Offsec generously assembled. My recommendation for those interested in taking the course is to spend as much time in the labs as possible. The motto &ldquo;Try Harder&rdquo; and the more difficult boxes will frustrate you but I promise when you finish the course you will miss the lab environment. The course was well worth the time and money and I have increased not only my attacking skills, but my overall security skills in the process.</p>
+<p>Feel free to comment or message me on twitter if you have any questions!</p>
+<p>-Mike (<a href="http://twitter.com/mikeboya">@mikeboya</a>)</p>
+
+    </div>
+    <footer>
+      <div class="stats">
+  
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/categories/oscp/">OSCP</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/offensive-security/">Offensive Security</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      <li>None</li>
+    </ul>
+  
+</div>
+
+    </footer>
+  </article>
+  
+    
+  <article class="post">
+    
+    <div>
+      <h2 id="say-something">Say Something</h2>
+        <form id="comment-form" class="new-comment" method="POST">
+          
+          <h3 class='reply-notice hidden'>
+            <span class='reply-name'></span>
+          </h3>
+
+          
+          <input type="hidden" name="options[entryId]" value="d8304f9d4f54ac290d58d7952e700045">
+          <input type='hidden' name='fields[replyThread]' value=''>
+          <input type='hidden' name='fields[replyID]' value=''>
+          <input type='hidden' name='fields[replyName]' value=''>
+
+          
+          <input required name='fields[name]' type='text' placeholder='Your Name'>
+          <input name='fields[website]' type='text' placeholder='Your Website'>
+          <input required name='fields[email]' type='email' placeholder='Your Email'>
+          <textarea required name='fields[body]' placeholder='Your Message' rows='10'></textarea>
+
+          
+          
+
+          
+          <div class='submit-notice'>
+            <strong class='submit-notice-text submit-success hidden'>Thanks for your comment! It will be shown on the site once it has been approved.</strong>
+            <strong class='submit-notice-text submit-failed hidden'>Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.</strong>
+          </div>
+
+          
+          <input type='submit' value='Submit' class='button'>
+          <input type='submit' value='Submitted' class='hidden button' disabled>
+          <input type='reset' value='Reset' class='button'>
+        </form>
+    </div>
+
+    
+    <div>
+      <h2>Comments</h2>
+    </div>
+  </article>
+
+
+  
+  <div class="pagination">
+    
+      <a href="/blog/exploit-exercises-nebula-level00/" class="button left"><span>Exploit Exercises - Nebula Level00</span></a>
+    
+    
+      <a href="/blog/blog-migration-helloworld2/" class="button right"><span>Blog Migration: HelloWorld2</span></a>
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent Posts</h1>
+      </header>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/synology-pushover-notifications/">Synology Pushover Notifications </a></h2>
+          <time class="published" datetime="2020-10-01 00:00:00 &#43;0000 UTC">October 1, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/metasploitctf2020-queen-of-diamonds-write-up/">Metasploit CTF 2020 - Queen Of Diamonds Write-Up</a></h2>
+          <time class="published" datetime="2020-02-04 00:00:00 &#43;0000 UTC">February 4, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/sans-holiday-challenge-2018-writeup/">SANS Holiday Challenge 2018 - Writeup</a></h2>
+          <time class="published" datetime="2019-01-17 00:00:00 &#43;0000 UTC">January 17, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/googlectf-spotted-quoll-write-up/">GoogleCTF - Spotted Quoll Write-Up</a></h2>
+          <time class="published" datetime="2016-05-01 00:00:00 &#43;0000 UTC">May 1, 2016</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/gse-results/">GSE Results</a></h2>
+          <time class="published" datetime="2016-04-21 00:00:00 &#43;0000 UTC">April 21, 2016</time>
+        </header>
+      </article>
+      
+      
+        <footer>
+          <a href="/blog/" class="button">See More</a>
+        </footer>
+      
+    </section>
+  
+
+  
+    
+
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/categories/exploit-exercises/">exploit-exercises<span class="count">20</span></a>
+          
+          <li>
+              <a href="/categories/ctf/">ctf<span class="count">4</span></a>
+          
+          <li>
+              <a href="/categories/sans-holiday-hack/">sans-holiday-hack<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/homelab/">homelab<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/offensive-security/">offensive-security<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/oscp/">oscp<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/stego/">stego<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/synology/">synology<span class="count">1</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>This theme was developed for Hugo static site generator.</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+        <li><a href="//github.com/mike-boya" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/mike-boya-a444a927" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/mikeboya" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+  
+  <p class="copyright">
+    © 2020 Mike Boya
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.75.1' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.5955090a3253deadcd66071270aa2274dabe15ffc97094cec252d87b6f3f00bf.js" integrity="sha256-WVUJCjJT3q3NZgcScKoidNq&#43;Ff/JcJTOwlLYe28/AL8="></script>
+    <script src="/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-64695407-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </div>
+  </body>
+</html>

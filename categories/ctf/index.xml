@@ -5,14 +5,13 @@
     <link>https://mike-boya.github.io/categories/ctf/</link>
     <description>Recent content in CTF on Mike Boya</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <lastBuildDate>Tue, 04 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://mike-boya.github.io/categories/ctf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Metasploit CTF 2020 - Queen Of Diamonds Write-Up</title>
-      <link>https://mike-boya.github.io/post/metasploitctf2020-queen-of-diamonds-write-up/</link>
+      <link>https://mike-boya.github.io/blog/metasploitctf2020-queen-of-diamonds-write-up/</link>
       <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/metasploitctf2020-queen-of-diamonds-write-up/</guid>
+      <guid>https://mike-boya.github.io/blog/metasploitctf2020-queen-of-diamonds-write-up/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;p&gt;My team and I participated in the Metasploit CTF this past week and came in third place! I wanted to write up a solution for one of my favorite challenges.&lt;/p&gt;
 &lt;p&gt;Special thanks to the Metasploit team for creating another great CTF and congrats to team pepega and &lt;a href=&#34;https://twitter.com/excusemewtf_ctf&#34;&gt;excusemewtf&lt;/a&gt; for taking the top spots!&lt;/p&gt;
@@ -27,20 +26,20 @@
     
     <item>
       <title>SANS Holiday Challenge 2018 - Writeup</title>
-      <link>https://mike-boya.github.io/post/sans-holiday-challenge-2018-writeup/</link>
+      <link>https://mike-boya.github.io/blog/sans-holiday-challenge-2018-writeup/</link>
       <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/sans-holiday-challenge-2018-writeup/</guid>
+      <guid>https://mike-boya.github.io/blog/sans-holiday-challenge-2018-writeup/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;p&gt;Hello and Happy New Year! This year&amp;rsquo;s Holiday Hack Challenge theme was an online conference called KringleCon, a cyber security conference hosted by Santa and his elves. It had all the elements of an in-person conference, including talks, badges, swag and the ability to network with other attendees. The challenge was to solve all 10 objectives and each of the &amp;ldquo;Cranberry Pi&amp;rdquo; mini-challenges.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GoogleCTF - Spotted Quoll Write-Up</title>
-      <link>https://mike-boya.github.io/post/googlectf-spotted-quoll-write-up/</link>
+      <link>https://mike-boya.github.io/blog/googlectf-spotted-quoll-write-up/</link>
       <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/googlectf-spotted-quoll-write-up/</guid>
+      <guid>https://mike-boya.github.io/blog/googlectf-spotted-quoll-write-up/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;p&gt;I participated in the Google CTF this weekend and really enjoyed the challenges. Here is a
 write-up of one of my solutions.&lt;/p&gt;
@@ -53,10 +52,10 @@ write-up of one of my solutions.&lt;/p&gt;
     
     <item>
       <title>SANS Holiday Challenge 2015 - Writeup</title>
-      <link>https://mike-boya.github.io/post/sans-holiday-challenge-2015-writeup/</link>
+      <link>https://mike-boya.github.io/blog/sans-holiday-challenge-2015-writeup/</link>
       <pubDate>Wed, 02 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/sans-holiday-challenge-2015-writeup/</guid>
+      <guid>https://mike-boya.github.io/blog/sans-holiday-challenge-2015-writeup/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;p&gt;The SANS Holiday Hack challenge this year was fantastic and I wanted to make sure
 to document my solutions on my blog. I have participated in the Holiday Hack Challenges since 2012, but haven&amp;rsquo;t documented them with the exception of some informal notes &amp;ndash; maybe I should change that! Anyway, enjoy my write-up and I encourage anyone who did not participate to give it a try before reading this post!&lt;/p&gt;</description>

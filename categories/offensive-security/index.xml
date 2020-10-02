@@ -5,14 +5,13 @@
     <link>https://mike-boya.github.io/categories/offensive-security/</link>
     <description>Recent content in Offensive Security on Mike Boya</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <lastBuildDate>Tue, 07 Jul 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://mike-boya.github.io/categories/offensive-security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Offensive Security Certified Professional (OSCP): My Experience</title>
-      <link>https://mike-boya.github.io/post/offensive-security-certified-professional-oscp-my-experience/</link>
+      <link>https://mike-boya.github.io/blog/offensive-security-certified-professional-oscp-my-experience/</link>
       <pubDate>Tue, 07 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mike-boya.github.io/post/offensive-security-certified-professional-oscp-my-experience/</guid>
+      <guid>https://mike-boya.github.io/blog/offensive-security-certified-professional-oscp-my-experience/</guid>
       <description>Introduction It was a long ride, but I finally finished my OSCP certification by completing the lab portion and passing the practical exam. I learned so much during the course and earned what I feel is a cert worth its weight in gold. As I have mentioned in previous blog posts, I take pride in guiding my professional development and I felt that taking a hands-on penetration testing course would be a great challenge and learning experience.</description>
     </item>
     
