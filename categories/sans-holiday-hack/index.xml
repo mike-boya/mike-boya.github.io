@@ -6,11 +6,7 @@
     <description>Recent content in SANS Holiday Hack on Mike Boya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Jan 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mike-boya.github.io/categories/sans-holiday-hack/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 17 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://mike-boya.github.io/categories/sans-holiday-hack/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SANS Holiday Challenge 2018 - Writeup</title>
       <link>https://mike-boya.github.io/post/sans-holiday-challenge-2018-writeup/</link>
@@ -18,7 +14,7 @@
       
       <guid>https://mike-boya.github.io/post/sans-holiday-challenge-2018-writeup/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
-&lt;p&gt;Hello and Happy New Year! This year&#39;s Holiday Hack Challenge theme was an online conference called KringleCon, a cyber security conference hosted by Santa and his elves. It had all the elements of an in-person conference, including talks, badges, swag and the ability to network with other attendees. The challenge was to solve all 10 objectives and each of the &amp;ldquo;Cranberry Pi&amp;rdquo; mini-challenges.&lt;/p&gt;</description>
+&lt;p&gt;Hello and Happy New Year! This year&amp;rsquo;s Holiday Hack Challenge theme was an online conference called KringleCon, a cyber security conference hosted by Santa and his elves. It had all the elements of an in-person conference, including talks, badges, swag and the ability to network with other attendees. The challenge was to solve all 10 objectives and each of the &amp;ldquo;Cranberry Pi&amp;rdquo; mini-challenges.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,7 +25,7 @@
       <guid>https://mike-boya.github.io/post/sans-holiday-challenge-2015-writeup/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;p&gt;The SANS Holiday Hack challenge this year was fantastic and I wanted to make sure
-to document my solutions on my blog. I have participated in the Holiday Hack Challenges since 2012, but haven&#39;t documented them with the exception of some informal notes &amp;ndash; maybe I should change that! Anyway, enjoy my write-up and I encourage anyone who did not participate to give it a try before reading this post!&lt;/p&gt;</description>
+to document my solutions on my blog. I have participated in the Holiday Hack Challenges since 2012, but haven&amp;rsquo;t documented them with the exception of some informal notes &amp;ndash; maybe I should change that! Anyway, enjoy my write-up and I encourage anyone who did not participate to give it a try before reading this post!&lt;/p&gt;</description>
     </item>
     
   </channel>

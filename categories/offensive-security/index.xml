@@ -6,11 +6,7 @@
     <description>Recent content in Offensive Security on Mike Boya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jul 2015 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mike-boya.github.io/categories/offensive-security/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 07 Jul 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://mike-boya.github.io/categories/offensive-security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Offensive Security Certified Professional (OSCP): My Experience</title>
       <link>https://mike-boya.github.io/post/offensive-security-certified-professional-oscp-my-experience/</link>

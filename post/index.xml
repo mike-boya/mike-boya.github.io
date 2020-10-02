@@ -6,10 +6,17 @@
     <description>Recent content in Post on Mike Boya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Feb 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mike-boya.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://mike-boya.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Synology Pushover Notifications </title>
+      <link>https://mike-boya.github.io/post/synology-pushover-notifications/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mike-boya.github.io/post/synology-pushover-notifications/</guid>
+      <description>Intro I recently added a Synology NAS to my home lab and I am an instant fan. I have been spending time configuring and tinkering with the new device.
+I use Pushover for sending push notifications from various home lab services to my devices. For example, I have it integrated in Home Assistant for reminders and notifications about unique automations.
+When configuring notifications on the NAS, I noticed a &amp;ldquo;Push Service&amp;rdquo; tab and thought, &amp;ldquo;Great!</description>
+    </item>
     
     <item>
       <title>Metasploit CTF 2020 - Queen Of Diamonds Write-Up</title>
@@ -36,7 +43,7 @@
       
       <guid>https://mike-boya.github.io/post/sans-holiday-challenge-2018-writeup/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
-&lt;p&gt;Hello and Happy New Year! This year&#39;s Holiday Hack Challenge theme was an online conference called KringleCon, a cyber security conference hosted by Santa and his elves. It had all the elements of an in-person conference, including talks, badges, swag and the ability to network with other attendees. The challenge was to solve all 10 objectives and each of the &amp;ldquo;Cranberry Pi&amp;rdquo; mini-challenges.&lt;/p&gt;</description>
+&lt;p&gt;Hello and Happy New Year! This year&amp;rsquo;s Holiday Hack Challenge theme was an online conference called KringleCon, a cyber security conference hosted by Santa and his elves. It had all the elements of an in-person conference, including talks, badges, swag and the ability to network with other attendees. The challenge was to solve all 10 objectives and each of the &amp;ldquo;Cranberry Pi&amp;rdquo; mini-challenges.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -61,7 +68,7 @@ write-up of one of my solutions.&lt;/p&gt;
       <pubDate>Thu, 21 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>https://mike-boya.github.io/post/gse-results/</guid>
-      <description>&lt;p&gt;It&#39;s official, I received the email from SANS letting me know that I earned the GSE certification! I am GSE #141 in a group of impressive information security professionals.&lt;/p&gt;
+      <description>&lt;p&gt;It&amp;rsquo;s official, I received the email from SANS letting me know that I earned the GSE certification! I am GSE #141 in a group of impressive information security professionals.&lt;/p&gt;
 &lt;p&gt;There are a ton of people that I would like to thank, including co-workers and friends. I would also like to thank Chris Sanders (GSE #64) for just being awesome and fielding some of my questions. Lastly, I would like to thank my lovely fiancée, Sophie, for putting up with my constant study and the late nights where, in her own words, I am &amp;ldquo;in the Matrix.&amp;rdquo;&lt;/p&gt;</description>
     </item>
     
@@ -73,7 +80,7 @@ write-up of one of my solutions.&lt;/p&gt;
       <guid>https://mike-boya.github.io/post/sans-holiday-challenge-2015-writeup/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;p&gt;The SANS Holiday Hack challenge this year was fantastic and I wanted to make sure
-to document my solutions on my blog. I have participated in the Holiday Hack Challenges since 2012, but haven&#39;t documented them with the exception of some informal notes &amp;ndash; maybe I should change that! Anyway, enjoy my write-up and I encourage anyone who did not participate to give it a try before reading this post!&lt;/p&gt;</description>
+to document my solutions on my blog. I have participated in the Holiday Hack Challenges since 2012, but haven&amp;rsquo;t documented them with the exception of some informal notes &amp;ndash; maybe I should change that! Anyway, enjoy my write-up and I encourage anyone who did not participate to give it a try before reading this post!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -512,7 +519,7 @@ to document my solutions on my blog. I have participated in the Holiday Hack Cha
 
       }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&amp;ldquo;There are two ways of completing this level, you may wish to do both :-)&amp;rdquo; - That sounds cool. Let&#39;s take a look.&lt;/p&gt;</description>
+&lt;p&gt;&amp;ldquo;There are two ways of completing this level, you may wish to do both :-)&amp;rdquo; - That sounds cool. Let&amp;rsquo;s take a look.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -692,7 +699,7 @@ to document my solutions on my blog. I have participated in the Holiday Hack Cha
 &lt;p&gt;The man page for access() confirms the suspicion: &amp;ldquo;&lt;strong&gt;Warning:&lt;/strong&gt; Using access() to check if a user is authorized to,
 for example, open a file before actually doing so using open(2) creates a security  hole,  because  the  user
 might exploit the short time interval between checking and opening the file to manipulate it.  For this reason,
-the use of this system call should be avoided.&amp;rdquo; - Let&#39;s see if we can cause that to occur on &lt;em&gt;line 24&lt;/em&gt;.&lt;/p&gt;</description>
+the use of this system call should be avoided.&amp;rdquo; - Let&amp;rsquo;s see if we can cause that to occur on &lt;em&gt;line 24&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -830,7 +837,7 @@ Mike</description>
       <pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate>
       
       <guid>https://mike-boya.github.io/post/blog-migration-helloworld2/</guid>
-      <description>It has been quite a while since I have posted over at IntricateDefense and although I was very busy, I decided that Blogger just wasn&#39;t suitable for the type of content I want to share. After some searching and checking in on my buddy Jordan Wright, I decided on Octopress! For those of you who don&#39;t know what Octopress is, you can check out (http://octopress.org/) &amp;ndash; there is some fantastic documentation about the blogging framework.</description>
+      <description>It has been quite a while since I have posted over at IntricateDefense and although I was very busy, I decided that Blogger just wasn&amp;rsquo;t suitable for the type of content I want to share. After some searching and checking in on my buddy Jordan Wright, I decided on Octopress! For those of you who don&amp;rsquo;t know what Octopress is, you can check out (http://octopress.org/) &amp;ndash; there is some fantastic documentation about the blogging framework.</description>
     </item>
     
     <item>
@@ -840,7 +847,7 @@ Mike</description>
       
       <guid>https://mike-boya.github.io/post/infosec-certifications-are-they-really-worth-it/</guid>
       <description>One of the most frequently asked questions I receive from individuals looking to enter the Information Security field is: &amp;ldquo;Should I pursue certifications?&amp;rdquo;
-I have had many in-depth conversation on this topic with my peers, so I&#39;ll share my thoughts and logic on the subject here.
+I have had many in-depth conversation on this topic with my peers, so I&amp;rsquo;ll share my thoughts and logic on the subject here.
 The answer to this question is not black and white &amp;ndash; it is subjective and highly dependent on the individual. I know several smart and knowledgeable professionals with 0 certifications, and an equal number of smart and knowledgeable professionals with 10-20 certs.</description>
     </item>
     
